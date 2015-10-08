@@ -1,6 +1,7 @@
 body
   font-family: $font
   text-align: center
+  position: relative
 
   nav
     background: rgba(0,0,0,0.6)
@@ -127,7 +128,6 @@ body
 
   // Overlay
   .overlay
-    min-height: 100vh
     background: rgba(0,0,0,0.75)
     position: absolute
     top: 0
@@ -150,7 +150,6 @@ body
     @include transform(translateY(-1000px))
     transition: all 600ms ease-in-out
     max-width: 100%
-    min-height: 521px
     background: $lightGrey
     padding: 30px
     box-shadow: 0 20px 0px rgba(0,0,0,0.4)
@@ -203,53 +202,59 @@ body
         margin: 40px 0 45px
         background: $lightGrey
         padding: 5px
-        opacity: 0.6
+        color: $grey2
         z-index: 1
 
       #signup
         position: relative
         height: 150px
+        margin-bottom: 30px
 
-        form
-          color: black
-          position: relative
-          margin-top: 45px
-          @include display(flex)
+        #mc_embed_signup
 
-          .mc-field-group,
-          .clear
-            display: inline-block
-            vertical-align: top
+          form
+            color: black
+            position: relative
+            margin-top: 45px
 
-          input[type="email"]
-            width: 510px
-            height: 56px
-            border-radius: 5px
-            border: none
-            outline: none
-            padding: 20px
-            box-sizing: border-box
-            font-weight: 100
+            #mc_embed_signup_scroll
+              position: absolute
+              left: 0
+              right: 0
 
-          input[type="submit"]
-            background: $pink
-            border-radius: 3px
-            border: none
-            outline: none
-            color: $white
-            font-size: 18px
-            width: 144px
-            height: 56px
+              .mc-field-group,
+              .clear
+                display: inline-block
+                vertical-align: top
 
-            &:focus
-              color: rgba($white, 0.6)
+                input[type="email"]
+                  width: 510px
+                  height: 56px
+                  border-radius: 5px
+                  border: none
+                  outline: none
+                  padding: 20px
+                  box-sizing: border-box
+                  font-weight: 100
 
-          .errors
-            text-align: left
-            padding: 5px 20px
-            color: red
-            font-weight: 300
+                input[type="submit"]
+                  background: $pink
+                  border-radius: 5px
+                  border: none
+                  outline: none
+                  color: $white
+                  font-size: 18px
+                  width: 144px
+                  height: 56px
 
+                  &:focus
+                    color: rgba($white, 0.6)
+
+              .errors
+                text-align: left
+                padding: 5px 20px
+                color: red
+                font-weight: 300
 
         #signup-success
           text-align: center
@@ -265,18 +270,36 @@ body
             font-weight: 400
             text-align: center
             margin: 0
-            opacity: 1
-            color: #7F7F7F
-            line-height: 3
+            color: $grey2
 
           img
             margin: 25px 16px 0
+            border-radius: 50%
+
+            &:hover
+              box-shadow: 1px 3px 1px -1px $grey2
+              @include transform(scale(1.2))
+              transition: all 200ms cubic-bezier(.17, .67, .3, 2.75)
 
 
 @media (max-width: 767px)
-  main .container
-    #app-highlights
-      display: none
+  body
+    main .container
+      #app-highlights
+        display: none
+
+    .modal .container #signup #mc_embed_signup form #mc_embed_signup_scroll
+      .mc-field-group,
+      .clear
+        display: block
+
+        input[type="email"]
+          width: 100%
+          text-align: center
+
+        input[type="submit"]
+          width: 100%
+          margin-top: 15px
 
 @media (max-width: 667px)
   body
@@ -321,6 +344,23 @@ body
         .cta
           margin: 0 0 47px
 
+    // Overlay
+    .modal
+      .container
+        img
+          margin: 15px 12px
+
+        h2
+          margin: 15px 0 0
+
+        p
+          margin: 10px 0 20px
+
+        #signup
+          #signup-success
+            img
+              margin-top: 20px
+
 @media (max-width: 414px)
   body
     main
@@ -330,3 +370,24 @@ body
         h2,
         h3
           font-size: 36px
+
+    // Overlay
+    .modal
+      .container
+        img
+          margin: 15px 12px
+
+        h2
+          margin: 15px 0 0
+          font-size: 7.8vw
+          line-height: 1.5
+
+        p
+          margin: 10px 0 20px
+
+@media (min-width: 1440px)
+  body
+    section#hero
+      background:
+        image: url(../img/hero-bg.jpg)
+        size: cover

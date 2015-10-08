@@ -1,5 +1,10 @@
 $(function() {
 
+  var $form = $('#mc-embedded-subscribe-form'),
+      $inputs = $('.mc-field-group input, .clear input'),
+      $formSuccess = $('#signup-success'),
+      $overlay = $('.overlay');
+
   $('#toTop').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
       var target = $(this.hash);
@@ -15,17 +20,16 @@ $(function() {
 
 // Contact Us Overlay
   $('.cta').on('click', function(){
-    $('.overlay').addClass('is-open');
+    $overlay.addClass('is-open');
   });
 
   $('.close-btn').on('click', function(){
-    $('.overlay').removeClass('is-open');
-    $('#signup-success').fadeOut('slow');
+    $overlay.removeClass('is-open');
+    $formSuccess.fadeOut('slow');
+    $inputs.fadeIn('slow');
   });
 
 // Form submit
-  var $form = $('#mc-embedded-subscribe-form');
-
   $form.validate({
     rules: {
       EMAIL: {
@@ -44,8 +48,9 @@ $(function() {
     },
     submitHandler: function(){
       $.post(document.location.url, $(this).serialize(), function(){
-        $('#mc-embedded-subscribe-form')[0].reset();
-        $('#signup-success').fadeIn();
+        $form[0].reset();
+        $formSuccess.fadeIn();
+        $inputs.hide();
       });
     }
   });
