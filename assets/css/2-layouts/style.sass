@@ -1,0 +1,332 @@
+body
+  font-family: $font
+  text-align: center
+
+  nav
+    background: rgba(0,0,0,0.6)
+    position: fixed
+    width: 100%
+    height: 52px
+    text-align: left
+
+    h1
+      display: inline-block
+      margin: 0
+      padding: 8px 0
+      vertical-align: top
+      color: $white
+      font-weight: 100
+      font-size: 30px
+
+    a
+      text-decoration: none
+
+    #about-link
+      float: right
+      color: $pink
+      background: rgba(0,0,0,0.4)
+      font-size: 14px
+      padding: 7px 27px
+      border-radius: 5px
+      display: inline-block
+      margin: 11px 11px 0 0
+
+      &:hover
+        background: rgba(200,200,200,0.15)
+        transition: all 200ms ease-in-out
+
+  section#hero
+    height: 673px
+    background:
+      image: url(../img/hero-bg.jpg)
+    color: $white
+    @include display(flex)
+    @include align-items(center)
+    @include justify-content(center)
+
+    #mobileContent
+      display: none
+
+    h2
+      margin: 9px
+      font-size: 64px
+      font-weight: 400
+
+    p
+      margin: 0
+      font-size: 20px
+      font-weight: 100
+      opacity: 0.8
+
+    .cta
+      border: 1px solid rgba($white, 0.45)
+      margin-top: 84px
+
+  main
+    .container
+      max-width: 1078px
+      margin: 0 auto
+
+      h2,
+      h3
+        font-size: 64px
+        font-weight: 300
+
+      h3
+        opacity: 0.65
+
+      p
+        max-width: 580px
+        margin: 0 auto 77px
+        font-weight: 300
+
+      #app-highlights
+        width: 100%
+
+      .row
+        @include display(flex)
+        @include align-items(center)
+        @include justify-content(space-around)
+        max-width: 730px
+        margin: 0 auto 50px
+
+      .cta
+        background: $pink
+        margin: 71px 0 92px
+
+
+  footer
+    background: $greyBlue
+    height: 180px
+    @include display(flex)
+    @include flex-direction(column)
+    @include align-items(center)
+    @include justify-content(center)
+
+    a
+      text-decoration: none
+      display: block
+      color: $textGreyLight
+      font-size: 14px
+      font-weight: 100
+
+      &:hover
+        color: $textGrey
+        transition: all 200ms ease-in-out
+
+    a#twitter
+      font-size: 40px
+      margin-bottom: 27px
+
+  .cta
+    text-decoration: none
+    color: $white
+    border-radius: 6px
+    padding: 15px 75px
+    display: inline-block
+
+  // Overlay
+  .overlay
+    min-height: 100vh
+    background: rgba(0,0,0,0.75)
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 2
+    opacity: 0
+    pointer-events: none
+    transition: all 700ms ease-in-out
+
+    &.is-open
+      opacity: 1
+      pointer-events: auto
+
+      .modal
+        @include transform(translateY(0))
+
+  .modal
+    @include transform(translateY(-1000px))
+    transition: all 600ms ease-in-out
+    max-width: 100%
+    min-height: 521px
+    background: $lightGrey
+    padding: 30px
+    box-shadow: 0 20px 0px rgba(0,0,0,0.4)
+    position: relative
+
+    #modal-bg
+      position: absolute
+      right: 0
+      bottom: 45px
+      z-index: -1
+
+    .close-btn
+      position: absolute
+      top: 20px
+      right: 5%
+      height: 50px
+      width: 50px
+      font-size: 50px
+      text-align: center
+      color: $grey
+      line-height: 30px
+      cursor: pointer
+      transition: all 100ms ease-in-out
+
+      &:hover
+        @include transform(scale(1.3))
+
+    .container
+      padding-top: 20px
+      max-width: 685px
+      margin: 0 auto
+
+      img
+        display: inline-block
+        margin: 71px 12px
+
+      h2
+        font-weight: 300
+        font-size: 36px
+        display: inline-block
+        vertical-align: top
+        margin: 71px 0 0
+        line-height: 1.1
+
+      p
+        text-align: left
+        line-height: 1.5
+        font-weight: 300
+        font-size: 14px
+        margin: 40px 0 45px
+        background: $lightGrey
+        padding: 5px
+        opacity: 0.6
+        z-index: 1
+
+      #signup
+        position: relative
+        height: 150px
+
+        form
+          color: black
+          position: relative
+          margin-top: 45px
+          @include display(flex)
+
+          .mc-field-group,
+          .clear
+            display: inline-block
+            vertical-align: top
+
+          input[type="email"]
+            width: 510px
+            height: 56px
+            border-radius: 5px
+            border: none
+            outline: none
+            padding: 20px
+            box-sizing: border-box
+            font-weight: 100
+
+          input[type="submit"]
+            background: $pink
+            border-radius: 3px
+            border: none
+            outline: none
+            color: $white
+            font-size: 18px
+            width: 144px
+            height: 56px
+
+            &:focus
+              color: rgba($white, 0.6)
+
+          .errors
+            text-align: left
+            padding: 5px 20px
+            color: red
+            font-weight: 300
+
+
+        #signup-success
+          text-align: center
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          display: none
+
+          p
+            font-size: 18px
+            font-weight: 400
+            text-align: center
+            margin: 0
+            opacity: 1
+            color: #7F7F7F
+            line-height: 3
+
+          img
+            margin: 25px 16px 0
+
+
+@media (max-width: 767px)
+  main .container
+    #app-highlights
+      display: none
+
+@media (max-width: 667px)
+  body
+    nav
+      display: none
+
+    section#hero
+      height: 555px
+
+      #desktopContent
+        display: none
+
+      #mobileContent
+        display: block
+
+        h2
+          font-size: 48px
+          font-weight: 100
+
+        p
+          font-size: 18px
+          opacity: 0.6
+
+    main
+      .container
+        h2
+          margin: 50px 0 27px
+
+        h3
+          margin-bottom: 90px
+
+        .row
+          @include flex-direction(column)
+
+          img
+            display: block
+            margin-bottom: 90px
+
+        #platform-labels
+          display: none
+
+        .cta
+          margin: 0 0 47px
+
+@media (max-width: 414px)
+  body
+    main
+      .container
+        padding: 0 20px
+
+        h2,
+        h3
+          font-size: 36px
