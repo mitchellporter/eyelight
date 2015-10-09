@@ -3,7 +3,8 @@ $(function() {
   var $form = $('#mc-embedded-subscribe-form'),
       $inputs = $('.mc-field-group input, .clear input'),
       $formSuccess = $('#signup-success'),
-      $overlay = $('.overlay');
+      $overlay = $('.overlay'),
+      animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
   $('#toTop').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -16,6 +17,12 @@ $(function() {
         return false;
       }
     }
+  });
+
+  $('#eyelight-logo').click(function(){
+    $('#blink').addClass('blink').one(animationEnd, function(){
+      $(this).removeClass('blink');
+    });
   });
 
 // Contact Us Overlay

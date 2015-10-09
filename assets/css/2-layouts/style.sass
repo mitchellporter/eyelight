@@ -10,6 +10,29 @@ body
     height: 52px
     text-align: left
 
+    #eyelight-logo
+      background:
+        image: url(../img/eyelight-icon.png)
+      display: inline-block
+      width: 53px
+      height: 52px
+      position: relative
+
+      #blink
+        background: $pink
+        width: 30.5px
+        height: 31px
+        border-radius: 50%
+        position: absolute
+        top: 11px
+        left: 11px
+        transition: all 300ms ease-in-out
+        @include transform(rotateX(90deg))
+        @include transform-origin(50% 0%)
+
+        #blink.blink
+          height: 31px
+
     h1
       display: inline-block
       margin: 0
@@ -90,6 +113,14 @@ body
         @include justify-content(space-around)
         max-width: 730px
         margin: 0 auto 50px
+
+        .platform
+          border-radius: 50%
+          width: 277px
+          height: 277px
+          @include display(flex)
+          @include align-items(center)
+          @include justify-content(center)
 
       .cta
         background: $pink
@@ -334,8 +365,7 @@ body
         .row
           @include flex-direction(column)
 
-          img
-            display: block
+          .platform
             margin-bottom: 90px
 
         #platform-labels

@@ -1,0 +1,90 @@
+.animated
+  @include animation-fill-mode(both)
+
+
+@include keyframes(blink)
+  30%
+    @include transform(rotateX(0deg))
+
+.blink
+  @include animation-name(blink)
+  @include animation-duration(.25s)
+
+
+@include keyframes(shadow-pulse)
+  0%
+    box-shadow: 0 0 0 rgba(0,0,0,0)
+
+  50%
+    box-shadow: 0 13px 21px rgba(0,0,0,0.25)
+
+.shadow-pulse
+  @include animation-name(shadow-pulse)
+  @include animation-duration(4s)
+  @include animation-iteration-count(infinite)
+
+.shadow-pulse-delay
+  @include animation-name(shadow-pulse)
+  @include animation-duration(4s)
+  @include animation-iteration-count(infinite)
+  @include animation-delay(2s)
+
+
+
+// Bounce wit me
+@include keyframes(bounceIn)
+  from, 20%, 40%, 60%, 80%, to
+    @include animation-timing-function(ease-out)
+
+  0%
+    opacity: 1
+    @include transform(scale3d(.6, .6, .6))
+
+  20%
+    @include transform(scale3d(1.1, 1.1, 1.1))
+
+  40%
+    @include transform(scale3d(.9, .9, .9))
+
+  60%
+    opacity: 1
+    @include transform(scale3d(1.03, 1.03, 1.03))
+
+  80%
+    @include transform(scale3d(.97, .97, .97))
+
+  to
+    opacity: 1
+    @include transform(scale3d(1, 1, 1))
+
+.bounceIn
+  @include animation-name(bounceIn)
+  @include animation-duration(2s)
+
+
+// Boing!
+@include keyframes(bounceInUp)
+  from, 60%, 75%, 90%, to
+    @include animation-timing-function(cubic-bezier(0.215, 0.610, 0.355, 1.000))
+
+  from
+    opacity: 0
+    @include transform(translate3d(0, 3000px, 0))
+
+  60%
+    opacity: 1
+    @include transform(translate3d(0, -20px, 0))
+
+  75%
+    @include transform(translate3d(0, 10px, 0))
+
+  90%
+    @include transform(translate3d(0, -5px, 0))
+
+  to
+    @include transform(translate3d(0, 0, 0))
+
+
+.bounceInUp
+  @include animation-name(bounceInUp)
+  @include animation-duration(1s)

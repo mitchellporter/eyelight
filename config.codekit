@@ -1282,6 +1282,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/assets\/css\/1-base\/_animations.sass": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 2,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/1-base\/_animations.sass",
+		"outputAbbreviatedPath": "\/assets\/css\/css\/_animations.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": false
+		},
 	"\/assets\/css\/1-base\/_vars.sass": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1372,6 +1388,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/eyelight-article.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 284299,
+		"inputAbbreviatedPath": "\/assets\/img\/eyelight-article.png",
+		"outputAbbreviatedPath": "\/assets\/img\/eyelight-article.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/eyelight-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1438,13 +1465,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/phone.png": {
+	"\/assets\/img\/Phone.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20123,
+		"inputAbbreviatedPath": "\/assets\/img\/Phone.png",
+		"outputAbbreviatedPath": "\/assets\/img\/Phone.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/phone1.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 37482,
-		"inputAbbreviatedPath": "\/assets\/img\/phone.png",
-		"outputAbbreviatedPath": "\/assets\/img\/phone.png",
+		"inputAbbreviatedPath": "\/assets\/img\/phone1.png",
+		"outputAbbreviatedPath": "\/assets\/img\/phone1.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1460,13 +1498,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/watch.png": {
+	"\/assets\/img\/Watch.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15431,
+		"inputAbbreviatedPath": "\/assets\/img\/Watch.png",
+		"outputAbbreviatedPath": "\/assets\/img\/Watch.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/watch1.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 31048,
-		"inputAbbreviatedPath": "\/assets\/img\/watch.png",
-		"outputAbbreviatedPath": "\/assets\/img\/watch.png",
+		"inputAbbreviatedPath": "\/assets\/img\/watch1.png",
+		"outputAbbreviatedPath": "\/assets\/img\/watch1.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
