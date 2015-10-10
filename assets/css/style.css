@@ -801,7 +801,7 @@ body {
         transition: all 200ms ease-in-out; }
   body section#hero {
     height: 673px;
-    background-image: url(../img/hero-bg.jpg);
+    background-image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.jpg);
     color: #ffffff;
     display: -webkit-box;
     display: -moz-box;
