@@ -9,10 +9,11 @@ body
     width: 100%
     height: 52px
     text-align: left
+    z-index: 1
 
     #eyelight-logo
       background:
-        image: url(../img/eyelight-icon.png)
+        image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/eyelight-icon.png)
       display: inline-block
       width: 53px
       height: 52px
@@ -75,21 +76,25 @@ body
       margin: 9px
       font-size: 64px
       font-weight: 400
+      @include animation-delay(0s)
 
     p
       margin: 0
       font-size: 20px
       font-weight: 100
       opacity: 0.8
+      @include animation-delay(0.05s)
 
     .cta
       border: 1px solid rgba($white, 0.45)
       margin-top: 84px
+      @include animation-delay(0.1s)
 
   main
     .container
       max-width: 1078px
       margin: 0 auto
+      padding: 0 20px
 
       h2,
       h3
@@ -103,10 +108,127 @@ body
         max-width: 580px
         margin: 0 auto 77px
         font-weight: 300
+        opacity: 0
 
-      #app-highlights
-        width: 100%
+        span
+          opacity: 0
+          font-weight: 600
 
+    #app-highlights-img
+      display: none
+
+    .app-highlights
+      position: relative
+      padding-top: 50px
+      max-width: 1215px
+      height: 480px
+      margin: 0 auto
+
+      #appFace
+        position: absolute
+        top: 75px
+        right: 280px
+
+      .dot
+        position: absolute
+        border-radius: 50%
+        opacity: 0.6
+        cursor: pointer
+        z-index: 1
+
+      #pinkDot
+        top: 255px
+        right: 700px
+        @include animation(pulse-pink 2.5s infinite)
+
+      #cyanDot
+        top: 335px
+        right: 640px
+        @include animation(pulse-cyan 2.5s 0.33s infinite)
+
+      #greenDot
+        top: 170px
+        right: 435px
+        @include animation(pulse-green 2.5s 0.66s infinite)
+
+      #pinkDot.activeHighlight,
+      #cyanDot.activeHighlight,
+      #greenDot.activeHighlight
+        @include animation(none)
+        opacity: 1
+
+      .path
+        position: absolute
+        opacity: 0
+        transition: all 50ms linear
+
+      #pinkPath.activePath,
+      #cyanPath.activePath,
+      #greenPath.activePath
+        opacity: 1
+        transition: all 200ms linear
+
+      #pinkPath
+        top: 39px
+        right: 705px
+
+      #cyanPath
+        top: 339px
+        right: 425px
+
+      #greenPath
+        top: 15px
+        right: 300px
+
+      .FAQ
+        position: absolute
+        text-align: left
+        opacity: 0
+
+      #pinkFAQ.activeFAQ,
+      #cyanFAQ.activeFAQ,
+      #greenFAQ.activeFAQ
+        opacity: 1
+        transition: all 500ms linear
+
+        p
+          margin: 0
+
+        .question
+          font-size: 18px
+          font-weight: 600
+          line-height: 2
+
+        .answer
+          font-size: 14px
+          font-weight: 300
+          line-height: 1.25
+
+      #pinkFAQ
+        width: 295px
+        right: 810px
+        top: 20px
+
+        .question
+          color: $pink
+
+      #cyanFAQ
+        width: 410px
+        right: 0
+        top: 322px
+
+        .question
+          color: $cyan
+
+      #greenFAQ
+        width: 260px
+        right: 30px
+        top: 0
+
+        .question
+          color: $green
+
+    .container
       .row
         @include display(flex)
         @include align-items(center)
@@ -121,6 +243,15 @@ body
           @include display(flex)
           @include align-items(center)
           @include justify-content(center)
+          opacity: 0
+
+        .platform.shadow-pulse
+          @include animation(fadeInLeft 1.5s, shadow-pulse 4s 1s infinite)
+          opacity: 1
+
+        .platform.shadow-pulse-delay
+          @include animation(fadeInRight 1.5s, shadow-pulse 4s 3s infinite)
+          opacity: 1
 
       .cta
         background: $pink
@@ -286,6 +417,7 @@ body
                 padding: 5px 20px
                 color: red
                 font-weight: 300
+                height: 20px
 
         #signup-success
           text-align: center
@@ -313,11 +445,75 @@ body
               transition: all 200ms cubic-bezier(.17, .67, .3, 2.75)
 
 
+@media (max-width: 1140px)
+  body main
+    .app-highlights
+
+      #appFace
+        left: 20%
+
+      #pinkDot
+        left: 36.2%
+
+      #cyanDot
+        left: 43%
+
+      #greenDot
+        right: 38.7%
+
+      #pinkPath
+        right: 63%
+
+      #cyanPath
+        width: 14.5vw
+
+      #greenPath
+        left: 60.5%
+
+      #pinkFAQ
+        left: 10px
+        background: $white
+
+      #greenFAQ
+        background: $white
+
+@media (max-width: 1023px)
+  body main
+    #app-highlights-img
+      display: block
+      width: 95%
+      margin: 0 auto
+
+    .app-highlights
+      display: none
+
 @media (max-width: 767px)
   body
-    main .container
-      #app-highlights
+    main
+      #app-highlights-img
         display: none
+
+      .app-highlights
+        display: none
+
+      .container .row
+        .platform
+          margin: 0 auto 90px
+          border-radius: 50%
+          width: 277px
+          height: 277px
+          @include display(flex)
+          @include align-items(center)
+          @include justify-content(center)
+          opacity: 0
+
+        .platform.shadow-pulse
+          @include animation(fadeInLeft 1.5s, shadow-pulse 4s 1s infinite)
+          opacity: 1
+
+        .platform.shadow-pulse-delay
+          @include animation(fadeInRight 1.5s, shadow-pulse 4s 3s infinite)
+          opacity: 1
 
     .modal .container #signup #mc_embed_signup form #mc_embed_signup_scroll
       .mc-field-group,
@@ -366,7 +562,7 @@ body
           @include flex-direction(column)
 
           .platform
-            margin-bottom: 90px
+            margin: 0 auto 90px
 
         #platform-labels
           display: none
@@ -374,7 +570,6 @@ body
         .cta
           margin: 0 0 47px
 
-    // Overlay
     .modal
       .container
         img
@@ -401,7 +596,6 @@ body
         h3
           font-size: 36px
 
-    // Overlay
     .modal
       .container
         img
@@ -415,9 +609,15 @@ body
         p
           margin: 10px 0 20px
 
+@media (max-width: 330px)
+  body main .container
+    .cta
+      font-size: 18px
+
+
 @media (min-width: 1440px)
   body
     section#hero
       background:
-        image: url(../img/hero-bg.jpg)
+        image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.jpg)
         size: cover

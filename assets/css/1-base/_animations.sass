@@ -2,13 +2,16 @@
   @include animation-fill-mode(both)
 
 
+
 @include keyframes(blink)
   30%
     @include transform(rotateX(0deg))
 
+
 .blink
   @include animation-name(blink)
   @include animation-duration(.25s)
+
 
 
 @include keyframes(shadow-pulse)
@@ -17,6 +20,7 @@
 
   50%
     box-shadow: 0 13px 21px rgba(0,0,0,0.25)
+
 
 .shadow-pulse
   @include animation-name(shadow-pulse)
@@ -30,46 +34,114 @@
   @include animation-delay(2s)
 
 
-
-// Bounce wit me
-@include keyframes(bounceIn)
-  from, 20%, 40%, 60%, 80%, to
-    @include animation-timing-function(ease-out)
-
+@include keyframes(pulse-pink)
   0%
+    box-shadow: 0 0 0 0 rgba(255, 60, 118, 0)
+
+  50%
+    box-shadow: 0 0 30px 10px rgba(255, 60, 118, 0.5)
     opacity: 1
-    @include transform(scale3d(.6, .6, .6))
 
-  20%
-    @include transform(scale3d(1.1, 1.1, 1.1))
+@include keyframes(pulse-green)
+  0%
+    box-shadow: 0 0 0 0 rgba(51, 180, 127, 0)
 
-  40%
-    @include transform(scale3d(.9, .9, .9))
-
-  60%
+  50%
+    box-shadow: 0 0 30px 10px rgba(51, 180, 127, 0.9)
     opacity: 1
-    @include transform(scale3d(1.03, 1.03, 1.03))
 
-  80%
-    @include transform(scale3d(.97, .97, .97))
+@include keyframes(pulse-cyan)
+  0%
+    box-shadow: 0 0 0 0 rgba(60, 252, 255, 0)
+
+  50%
+    box-shadow: 0 0 30px 10px rgba(60, 252, 255, 0.5)
+    opacity: 1
+
+
+
+@include keyframes(flash)
+  from, 50%, to
+    opacity: 1
+
+  25%, 75%
+    opacity: 0
+
+
+.flash
+  @include animation-name(flash)
+  @include animation-duration(1s)
+
+
+
+@include keyframes(fadeInLeft)
+  from
+    opacity: 0
+    @include transform(translate3d(-100%, 0, 0))
 
   to
     opacity: 1
-    @include transform(scale3d(1, 1, 1))
-
-.bounceIn
-  @include animation-name(bounceIn)
-  @include animation-duration(2s)
+    @include transform(none)
 
 
-// Boing!
+
+.fadeInLeft
+  @include animation-name(fadeInLeft)
+  @include animation-duration(1s)
+
+
+@include keyframes(fadeInRight)
+  from
+    opacity: 0
+    @include transform(translate3d(100%, 0, 0))
+
+  to
+    opacity: 1
+    @include transform(none)
+
+
+.fadeInRight
+  @include animation-name(fadeInRight)
+  @include animation-duration(1s)
+
+
+
+@include keyframes(flip)
+  from
+    @include transform(perspective(400px) rotate3d(0, 1, 0, -360deg))
+    @include animation-timing-function(ease-out)
+
+  40%
+    @include transform(perspective(400px) translate3d(0, -20px, 150px) rotate3d(0, 1, 0, -190deg))
+    @include animation-timing-function(ease-out)
+
+  50%
+    @include transform(perspective(400px) translate3d(0, -20px, 150px) rotate3d(0, 1, 0, -170deg))
+    @include animation-timing-function(ease-in)
+
+  80%
+    @include transform(perspective(400px) scale3d(.95, .95, .95))
+    @include animation-timing-function(ease-in)
+
+  to
+    @include transform(perspective(400px))
+    @include animation-timing-function(ease-in)
+
+
+.animated.flip
+  @include backface-visibility(visible)
+  @include animation-name(flip)
+  @include animation-duration(0.5s)
+
+
+
 @include keyframes(bounceInUp)
   from, 60%, 75%, 90%, to
     @include animation-timing-function(cubic-bezier(0.215, 0.610, 0.355, 1.000))
 
   from
     opacity: 0
-    @include transform(translate3d(0, 3000px, 0))
+    @include transform(translate3d(0, 500px, 0))
 
   60%
     opacity: 1
@@ -87,4 +159,4 @@
 
 .bounceInUp
   @include animation-name(bounceInUp)
-  @include animation-duration(1s)
+  @include animation-duration(0.8s)

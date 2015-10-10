@@ -8,9 +8,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@eyelightapp">
     <meta name="twitter:creator" content="@_mitchellporter">
-    <meta name="twitter:title" content="Checkout Eyelight">
-    <meta name="twitter:description" content="Hey this is a really cool test for eyelight!">
-    <meta name="twitter:image" content="assets/img/eyelight-article.png">
+    <meta name="twitter:title" content="Your safety is our priority | Eyelight">
+    <meta name="twitter:description" content="Eyelight is an iOS app that helps keep you and your loved ones safe 24/7. We are doing everything the current safety apps are doing, and more… but we can’t say too much until we launch. Signup for beta to get early access.">
+    <meta name="twitter:image" content="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/eyelight-article.png">
     <title>Eyelight</title>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -29,20 +29,20 @@
     </nav>
 
     <section id="hero">
-      <div class="content animated bounceInUp" id="desktopContent">
-        <h2>Your safety is our priority</h2>
-        <p>
+      <div class="content" id="desktopContent">
+        <h2 class="animated bounceInUp">Your safety is our priority</h2>
+        <p class="animated bounceInUp">
           We help keep you and your loved ones safe 24/7
         </p>
-        <a href="#" class="cta">Sign up for beta</a>
+        <a href="#" class="cta animated bounceInUp">Sign up for beta</a>
       </div>
       <div class="content" id="mobileContent">
-        <img src="assets/img/eye.png" alt="eyelight icon" />
-        <h2>Eyelight</h2>
-        <p>
+        <img class="animated bounceInUp" src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/eye.png" alt="eyelight icon" />
+        <h2 class="animated bounceInUp">Eyelight</h2>
+        <p class="animated bounceInUp">
           Your safety is our priority
         </p>
-        <a href="#" class="cta">Sign up for beta</a>
+        <a href="#" class="cta animated bounceInUp">Sign up for beta</a>
       </div>
     </section>
 
@@ -50,21 +50,47 @@
       <div class="container">
         <h2>Coming Soon</h2>
         <p>
-          We are doing <strong>everything</strong> the current safety apps are doing, and <strong>more</strong>… but we can’t say too much until we launch
+          We are doing <span>everything</span> the current safety apps are doing, and <span>more</span>… but we can’t say too much until we launch
         </p>
-        <img src="assets/img/app-highlights.png" alt="app highlights" id="app-highlights"/>
+      </div>
+      <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/app-highlights.png" alt="app highlights" id="app-highlights-img"/>
+      <div class="app-highlights">
+        <img src="assets/img/appFace.png" alt="app highlights" id="appFace" />
+        <!-- Dots -->
+        <img src="assets/img/pinkDot.png" alt="hightlight" id="pinkDot" class="dot" />
+        <img src="assets/img/greenDot.png" alt="hightlight" id="greenDot" class="dot" />
+        <img src="assets/img/cyanDot.png" alt="hightlight" id="cyanDot" class="dot" />
+        <!-- Paths to FAQ -->
+        <img src="assets/img/pink-path1.svg" alt="dashed line" id="pinkPath" class="path"/>
+        <img src="assets/img/green-path1.svg" alt="dashed line" id="greenPath" class="path"/>
+        <img src="assets/img/cyan-path1.svg" alt="dashed line" id="cyanPath" class="path"/>
+        <!-- FAQ -->
+        <div class="FAQ" id="pinkFAQ">
+          <p class="question">Can you tell if I might be in danger?</p>
+          <p class="answer">Yup! you got it, but we don’t use any gimmicks here. We can’t say anymore about this yet (until launch)</p>
+        </div>
+        <div class="FAQ" id="cyanFAQ">
+          <p class="question">Can you contact people for me in an emergency?</p>
+          <p class="answer">You bet, we will notify your emergency contacts so they can take action, even if you don’t respond.</p>
+        </div>
+        <div class="FAQ" id="greenFAQ">
+          <p class="question">Can you watch me walk home?</p>
+          <p class="answer">We sure can, that’s easy but we plan on doing something even better (cooler).</p>
+        </div>
+      </div>
+      <div class="container">
         <h3>Platforms</h3>
         <div class="row">
-          <div class="platform shadow-pulse">
-            <img src="assets/img/phone.png" alt="phone" />
+          <div class="platform" id="phone">
+            <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/phone.png" alt="phone" />
           </div>
-          <div class="platform shadow-pulse-delay">
-            <img src="assets/img/watch.png" alt="apple watch" />
+          <div class="platform" id="watch">
+            <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/watch.png" alt="apple watch" />
           </div>
         </div>
         <div class="row" id="platform-labels">
-          <img src="assets/img/iOS.png" alt="phone label" />
-          <img src="assets/img/watch-word.png" alt="watch label" />
+          <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/iOS.png" alt="phone label" />
+          <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/watch-word.png" alt="watch label" />
         </div>
         <a href="#" class="cta">Sign up for beta</a>
       </div>
@@ -77,12 +103,12 @@
 
     <div class="overlay">
       <div class="modal">
-        <img id="modal-bg" src="assets/img/overlay-bg.png" alt="background design" />
+        <img id="modal-bg" src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-bg.png" alt="background design" />
         <div class="close-btn">
           <i class="ion-ios-close-outline"></i>
         </div>
         <div class="container">
-          <img src="assets/img/appeye.png" alt="app logo" />
+          <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/appeye.png" alt="app logo" />
           <h2>Welcome to Beta!</h2>
           <p>
             We are really excited to build this app so we can start helping people like you stay safe 24/7. Please take a minute
@@ -114,8 +140,8 @@
               <p>
                 Awesome! Check your inbox for confirmation.
               </p>
-              <a href="http://twitter.com/home?status=I%20just%20signed%20up%20to%20@eyelightapp,%20come%20stay%20safe%20with%20me%20&#128522;%20http%3A%2F%2Fwww.eyelight.io%2F" target="_blank"><img src="assets/img/overlay-twitter.png" alt="share on twitter" /></a>
-              <a href="http://www.facebook.com/share.php?u=http://dev.eyelight.io" target="_blank"><img src="assets/img/overlay-facebook.png" alt="share on facebook" /></a>
+              <a href="http://twitter.com/home?status=I%20just%20signed%20up%20to%20@eyelightapp,%20come%20stay%20safe%20with%20me%20&#128522;%20http%3A%2F%2Fwww.eyelight.io%2F" target="_blank"><img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-twitter.png" alt="share on twitter" /></a>
+              <a href="http://www.facebook.com/share.php?u=http://dev.eyelight.io" target="_blank"><img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-facebook.png" alt="share on facebook" /></a>
             </div>
           </div>
         </div>
