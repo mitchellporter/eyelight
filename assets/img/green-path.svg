@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="414px" height="161px" viewBox="0 0 414 161" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="144px" height="154px" viewBox="0 0 144 154" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
     <title>green path</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Desktop-HD-Copy" sketch:type="MSArtboardGroup" transform="translate(-840.000000, -946.000000)">
+        <g id="Desktop-HD-Copy" sketch:type="MSArtboardGroup" transform="translate(-840.000000, -953.000000)" stroke="#15A96D" stroke-width="2" stroke-dasharray="10">
             <g id="Group" sketch:type="MSLayerGroup" transform="translate(181.000000, 813.000000)">
-                <g id="green-path" transform="translate(660.000000, 128.000000)">
-                    <path d="M1.1484375,164.96875 C1.1484375,164.96875 -4.85028985,79.3509721 30.4335938,41.6367188 C65.7174774,3.92246536 142.074219,14.3359375 142.074219,14.3359375" stroke="#15A96D" stroke-width="2" stroke-dasharray="10" sketch:type="MSShapeGroup"></path>
-                    <text id="Can-you-watch-me-wal" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="18" font-weight="420" fill="#33B47F">
-                        <tspan x="154" y="18.7851562">Can you watch me walk home?</tspan>
-                    </text>
-                    <text id="We-sure-can,-that’s-" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="14" font-weight="260" fill="#000000">
-                        <tspan x="154" y="42.7851562">We sure can, that’s easy but we plan on</tspan>
-                        <tspan x="154" y="59.7851562">doing something even better (cooler).</tspan>
-                    </text>
-                </g>
+                <path d="M661.148438,292.96875 C661.148438,292.96875 655.14971,207.350972 690.433594,169.636719 C725.717477,131.922465 802.074219,142.335938 802.074219,142.335938" id="green-path" sketch:type="MSShapeGroup"></path>
             </g>
         </g>
     </g>
