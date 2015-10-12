@@ -4,6 +4,7 @@ $(function() {
       $inputs = $('.mc-field-group input, .clear input'),
       $formSuccess = $('#signup-success'),
       $overlay = $('.overlay'),
+      $modal = $('.modal'),
       animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
   $('#toTop').click(function() {
@@ -39,6 +40,10 @@ $(function() {
       });
     }
 
+    if(wScroll > $('.app-highlights').offset().top - ($(window).height() / 1.33)){
+      $('#hint').addClass('fadeInUp');
+    }
+
     if(wScroll > $('.platform').offset().top - ($(window).height() / 1.25)){
       $('#phone').addClass('shadow-pulse');
       $('#watch').addClass('shadow-pulse-delay');
@@ -52,6 +57,7 @@ $(function() {
 
   $('.dot').click(function(){
     $(this).toggleClass('activeHighlight');
+    $('p#hint').addClass('hide');
   });
 
   $('#pinkDot').click(function(){
@@ -72,12 +78,18 @@ $(function() {
 // Contact Us Overlay
   $('.cta').on('click', function(){
     $overlay.addClass('is-open');
+    $modal.addClass('bounceInDown').one(animationEnd, function(){
+      $(this).removeClass('bounceInDown');
+    });
   });
 
   $('.close-btn').on('click', function(){
     $overlay.removeClass('is-open');
     $formSuccess.fadeOut('slow');
     $inputs.fadeIn('slow');
+    $modal.addClass('slideOutUp').one(animationEnd, function(){
+      $(this).removeClass('slideOutUp');
+    });
   });
 
 // Form submit

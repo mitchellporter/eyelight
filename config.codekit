@@ -1454,6 +1454,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/hero-bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 785341,
+		"inputAbbreviatedPath": "\/assets\/img\/hero-bg.png",
+		"outputAbbreviatedPath": "\/assets\/img\/hero-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/iOS.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1527,6 +1538,17 @@
 		"initialSize": 369,
 		"inputAbbreviatedPath": "\/assets\/img\/pinkDot.png",
 		"outputAbbreviatedPath": "\/assets\/img\/pinkDot.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/twittercard.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 68976,
+		"inputAbbreviatedPath": "\/assets\/img\/twittercard.png",
+		"outputAbbreviatedPath": "\/assets\/img\/twittercard.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

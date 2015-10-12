@@ -4,7 +4,7 @@ body
   position: relative
 
   nav
-    background: rgba(0,0,0,0.6)
+    background: rgba(0,0,0,0.17)
     position: fixed
     width: 100%
     height: 52px
@@ -48,22 +48,22 @@ body
 
     #about-link
       float: right
-      color: $pink
+      color: $white
       background: rgba(0,0,0,0.4)
-      font-size: 14px
+      font-size: 12px
       padding: 7px 27px
       border-radius: 5px
       display: inline-block
       margin: 11px 11px 0 0
 
       &:hover
-        background: rgba(200,200,200,0.15)
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.25)
         transition: all 200ms ease-in-out
 
   section#hero
     height: 673px
     background:
-      image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.jpg)
+      image: url(../img/hero-bg.png)
     color: $white
     @include display(flex)
     @include align-items(center)
@@ -86,7 +86,7 @@ body
       @include animation-delay(0.05s)
 
     .cta
-      border: 1px solid rgba($white, 0.45)
+      border: 2px solid rgba($white, 0.45)
       margin-top: 84px
       @include animation-delay(0.1s)
 
@@ -100,6 +100,7 @@ body
       h3
         font-size: 64px
         font-weight: 300
+        font-family: 'Gill Sans', $font
 
       h3
         opacity: 0.65
@@ -123,6 +124,20 @@ body
       max-width: 1215px
       height: 480px
       margin: 0 auto
+
+      #hint
+        margin: 0
+        color: rgba(0,0,0,0.7)
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        opacity: 0
+        transition: all 300ms ease-out
+        font-size: 24px
+
+        &.fadeInUp
+          opacity: 1
 
       #appFace
         position: absolute
@@ -218,7 +233,7 @@ body
         top: 322px
 
         .question
-          color: $cyan
+          color: $cyan2
 
       #greenFAQ
         width: 260px
@@ -228,34 +243,41 @@ body
         .question
           color: $green
 
-    .container
-      .row
-        @include display(flex)
-        @include align-items(center)
-        @include justify-content(space-around)
-        max-width: 730px
-        margin: 0 auto 50px
+    #platforms
+      background: rgba(#D6D6D6, 0.22)
+      padding: 50px 0
+      margin-top: 75px
 
-        .platform
-          border-radius: 50%
-          width: 277px
-          height: 277px
+      .container
+        .row
           @include display(flex)
           @include align-items(center)
-          @include justify-content(center)
-          opacity: 0
+          @include justify-content(space-around)
+          max-width: 730px
+          margin: 0 auto 50px
 
-        .platform.shadow-pulse
-          @include animation(fadeInLeft 1.5s, shadow-pulse 4s 1s infinite)
-          opacity: 1
+          .platform
+            border-radius: 50%
+            width: 277px
+            height: 277px
+            background: $white
+            @include display(flex)
+            @include align-items(center)
+            @include justify-content(center)
+            opacity: 0
 
-        .platform.shadow-pulse-delay
-          @include animation(fadeInRight 1.5s, shadow-pulse 4s 3s infinite)
-          opacity: 1
+          .platform.shadow-pulse
+            @include animation(fadeInLeft 1.5s, shadow-pulse 4s 1s infinite)
+            opacity: 1
 
-      .cta
-        background: $pink
-        margin: 71px 0 92px
+          .platform.shadow-pulse-delay
+            @include animation(fadeInRight 1.5s, shadow-pulse 4s 3s infinite)
+            opacity: 1
+
+        .cta
+          background: $pink
+          border: 2px
+          margin: 71px 0 92px
 
 
   footer
@@ -299,29 +321,22 @@ body
     z-index: 2
     opacity: 0
     pointer-events: none
-    transition: all 700ms ease-in-out
+    transition: all 750ms ease-in-out
 
     &.is-open
       opacity: 1
       pointer-events: auto
 
-      .modal
-        @include transform(translateY(0))
-
   .modal
-    @include transform(translateY(-1000px))
-    transition: all 600ms ease-in-out
     max-width: 100%
-    background: $lightGrey
+    background:
+      color: $lightGrey
+      image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-bg.png)
+      repeat: no-repeat
+      position: bottom right
     padding: 30px
     box-shadow: 0 20px 0px rgba(0,0,0,0.4)
     position: relative
-
-    #modal-bg
-      position: absolute
-      right: 0
-      bottom: 45px
-      z-index: -1
 
     .close-btn
       position: absolute
@@ -365,7 +380,7 @@ body
         background: $lightGrey
         padding: 5px
         color: $grey2
-        z-index: 1
+        // z-index: 4
 
       #signup
         position: relative
@@ -444,6 +459,8 @@ body
               @include transform(scale(1.2))
               transition: all 200ms cubic-bezier(.17, .67, .3, 2.75)
 
+  .hide
+    display: none
 
 @media (max-width: 1140px)
   body main
@@ -496,24 +513,25 @@ body
       .app-highlights
         display: none
 
-      .container .row
-        .platform
-          margin: 0 auto 90px
-          border-radius: 50%
-          width: 277px
-          height: 277px
-          @include display(flex)
-          @include align-items(center)
-          @include justify-content(center)
-          opacity: 0
+      #platforms
+        .container .row
+          .platform
+            margin: 0 auto 90px
+            border-radius: 50%
+            width: 277px
+            height: 277px
+            @include display(flex)
+            @include align-items(center)
+            @include justify-content(center)
+            opacity: 0
 
-        .platform.shadow-pulse
-          @include animation(fadeInLeft 1.5s, shadow-pulse 4s 1s infinite)
-          opacity: 1
+          .platform.shadow-pulse
+            @include animation(fadeIn 1.5s, shadow-pulse 4s 1s infinite)
+            opacity: 1
 
-        .platform.shadow-pulse-delay
-          @include animation(fadeInRight 1.5s, shadow-pulse 4s 3s infinite)
-          opacity: 1
+          .platform.shadow-pulse-delay
+            @include animation(fadeIn 1.5s, shadow-pulse 4s 3s infinite)
+            opacity: 1
 
     .modal .container #signup #mc_embed_signup form #mc_embed_signup_scroll
       .mc-field-group,
@@ -551,24 +569,25 @@ body
           opacity: 0.6
 
     main
-      .container
-        h2
-          margin: 50px 0 27px
+      #platforms
+        .container
+          h2
+            margin: 50px 0 27px
 
-        h3
-          margin-bottom: 90px
+          h3
+            margin-bottom: 90px
 
-        .row
-          @include flex-direction(column)
+          .row
+            @include flex-direction(column)
 
-          .platform
-            margin: 0 auto 90px
+            .platform
+              margin: 0 auto 90px
 
-        #platform-labels
-          display: none
+          #platform-labels
+            display: none
 
-        .cta
-          margin: 0 0 47px
+          .cta
+            margin: 0 0 47px
 
     .modal
       .container
@@ -619,5 +638,5 @@ body
   body
     section#hero
       background:
-        image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.jpg)
+        image: url(.../img/hero-bg.png)
         size: cover

@@ -34,9 +34,32 @@
   @include animation-delay(2s)
 
 
+@include keyframes(pulse)
+  from
+    @include transform(scale3d(1, 1, 1))
+    opacity: 0.5
+
+  50%
+    @include transform(scale3d(1.05, 1.05, 1.05))
+    opacity: 1
+    letter-spacing: 1.5px
+
+  to
+    @include transform(scale3d(1, 1, 1))
+    opacity: 0.5
+
+
+.pulse
+  @include animation-name(pulse)
+  @include animation-duration(2.5s)
+  @include animation-iteration-count(infinite)
+
+
+
 @include keyframes(pulse-pink)
   0%
     box-shadow: 0 0 0 0 rgba(255, 60, 118, 0)
+
 
   50%
     box-shadow: 0 0 30px 10px rgba(255, 60, 118, 0.5)
@@ -73,6 +96,16 @@
   @include animation-duration(1s)
 
 
+@include keyframes(fadeIn)
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.fadeIn
+  @include animation-name(fadeIn)
+  @include animation-duration(1s)
+
 
 @include keyframes(fadeInLeft)
   from
@@ -83,6 +116,21 @@
     opacity: 1
     @include transform(none)
 
+
+@include keyframes(fadeInUp)
+  from
+    opacity: 0
+    @include transform(translate3d(0, 300px, 0))
+    font-size: 1px
+
+  to
+    opacity: 1
+    @include transform(none)
+
+
+.fadeInUp
+  @include animation-name(fadeInUp)
+  @include animation-duration(1s)
 
 
 .fadeInLeft
@@ -160,3 +208,49 @@
 .bounceInUp
   @include animation-name(bounceInUp)
   @include animation-duration(0.8s)
+
+
+@include keyframes (bounceInDown)
+  from, 60%, 75%, 90%, to
+    @include animation-timing-function(cubic-bezier(0.215, 0.610, 0.355, 1.000))
+
+  0%
+    opacity: 0
+    @include transform(translate3d(0, -3000px, 0))
+
+  60%
+    opacity: 1
+    @include transform(translate3d(0, 25px, 0))
+
+  75%
+    @include transform(translate3d(0, -10px, 0))
+
+  90%
+    @include transform(translate3d(0, 5px, 0))
+
+  to
+    @include transform(none)
+
+
+.bounceInDown
+  @include animation-name(bounceInDown)
+  @include animation-duration(1s)
+
+
+@include keyframes(slideOutUp)
+  0%
+    opacity: 1
+    @include transform(translate3d(0, 0 0))
+
+  10%
+    opacity: 1
+    @include transform(translate3d(0, 25px, 0))
+
+  100%
+    opacity: 0
+    @include transform(translate3d(0, -3000px, 0))
+
+
+.slideOutUp
+  @include animation-name(slideOutUp)
+  @include animation-duration(1s)

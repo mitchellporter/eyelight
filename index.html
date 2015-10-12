@@ -10,7 +10,7 @@
     <meta name="twitter:creator" content="@_mitchellporter">
     <meta name="twitter:title" content="Your safety is our priority | Eyelight">
     <meta name="twitter:description" content="Eyelight is an iOS app that helps keep you and your loved ones safe 24/7. We are doing everything the current safety apps are doing, and more… but we can’t say too much until we launch. Signup for beta to get early access.">
-    <meta name="twitter:image" content="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/eyelight-article.png">
+    <meta name="twitter:image" content="assets/img/twittercard.png">
     <title>Eyelight</title>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -55,6 +55,7 @@
       </div>
       <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/app-highlights.png" alt="app highlights" id="app-highlights-img"/>
       <div class="app-highlights">
+        <p id="hint">Click on the dots below to find out more!</p>
         <img src="assets/img/appFace.png" alt="app highlights" id="appFace" />
         <!-- Dots -->
         <img src="assets/img/pinkDot.png" alt="hightlight" id="pinkDot" class="dot" />
@@ -78,21 +79,24 @@
           <p class="answer">We sure can, that’s easy but we plan on doing something even better (cooler).</p>
         </div>
       </div>
-      <div class="container">
-        <h3>Platforms</h3>
-        <div class="row">
-          <div class="platform" id="phone">
-            <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/phone.png" alt="phone" />
+
+      <div id="platforms">
+        <div class="container">
+          <h3>Platforms</h3>
+          <div class="row">
+            <div class="platform" id="phone">
+              <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/phone.png" alt="phone" />
+            </div>
+            <div class="platform" id="watch">
+              <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/watch.png" alt="apple watch" />
+            </div>
           </div>
-          <div class="platform" id="watch">
-            <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/watch.png" alt="apple watch" />
+          <div class="row" id="platform-labels">
+            <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/iOS.png" alt="phone label" />
+            <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/watch-word.png" alt="watch label" />
           </div>
+          <a href="#" class="cta">Sign up for beta</a>
         </div>
-        <div class="row" id="platform-labels">
-          <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/iOS.png" alt="phone label" />
-          <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/watch-word.png" alt="watch label" />
-        </div>
-        <a href="#" class="cta">Sign up for beta</a>
       </div>
     </main>
 
@@ -103,7 +107,7 @@
 
     <div class="overlay">
       <div class="modal">
-        <img id="modal-bg" src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-bg.png" alt="background design" />
+        <!-- <img id="modal-bg" src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-bg.png" alt="background design" /> -->
         <div class="close-btn">
           <i class="ion-ios-close-outline"></i>
         </div>
