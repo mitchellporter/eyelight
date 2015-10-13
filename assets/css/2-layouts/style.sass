@@ -63,7 +63,7 @@ body
   section#hero
     height: 673px
     background:
-      image: url(../img/hero-bg.png)
+      image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.png)
     color: $white
     @include display(flex)
     @include align-items(center)
@@ -133,7 +133,6 @@ body
       .dot
         position: absolute
         border-radius: 50%
-        cursor: pointer
         z-index: 1
 
       #pinkDot
@@ -307,7 +306,7 @@ body
     max-width: 100%
     background:
       color: $lightGrey
-      image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-bg.png)
+      // image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-bg.png)
       repeat: no-repeat
       position: bottom right
     padding: 30px
@@ -348,15 +347,12 @@ body
         line-height: 1.1
 
       p
-        text-align: left
         line-height: 1.5
         font-weight: 300
         font-size: 14px
         margin: 40px 0 45px
-        background: $lightGrey
         padding: 5px
         color: $grey2
-        // z-index: 4
 
       #signup
         position: relative
@@ -403,12 +399,16 @@ body
                   &:focus
                     color: rgba($white, 0.6)
 
-              .errors
+              #errors
+                height: 30px
+                margin-bottom: 5px
                 text-align: left
-                padding: 5px 20px
-                color: red
-                font-weight: 300
-                height: 20px
+                padding: 0 25px
+
+                p
+                  margin: 0
+                  color: red
+                  font-size: 18px
 
         #signup-success
           text-align: center
@@ -614,5 +614,5 @@ body
   body
     section#hero
       background:
-        image: url(../img/hero-bg.png)
+        image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.png)
         size: cover

@@ -1069,7 +1069,7 @@ body {
         transition: all 200ms ease-in-out; }
   body section#hero {
     height: 673px;
-    background-image: url(../img/hero-bg.png);
+    background-image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.png);
     color: #ffffff;
     display: -webkit-box;
     display: -moz-box;
@@ -1153,7 +1153,6 @@ body {
     body main .app-highlights .dot {
       position: absolute;
       border-radius: 50%;
-      cursor: pointer;
       z-index: 1; }
     body main .app-highlights #pinkDot {
       top: 255px;
@@ -1375,7 +1374,6 @@ body {
   body .modal {
     max-width: 100%;
     background-color: #E5E5E5;
-    background-image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-bg.png);
     background-repeat: no-repeat;
     background-position: bottom right;
     padding: 30px;
@@ -1414,12 +1412,10 @@ body {
         margin: 71px 0 0;
         line-height: 1.1; }
       body .modal .container p {
-        text-align: left;
         line-height: 1.5;
         font-weight: 300;
         font-size: 14px;
         margin: 40px 0 45px;
-        background: #E5E5E5;
         padding: 5px;
         color: #7F7F7F; }
       body .modal .container #signup {
@@ -1461,12 +1457,15 @@ body {
                 body .modal .container #signup #mc_embed_signup form #mc_embed_signup_scroll .mc-field-group input[type="submit"]:focus,
                 body .modal .container #signup #mc_embed_signup form #mc_embed_signup_scroll .clear input[type="submit"]:focus {
                   color: rgba(255, 255, 255, 0.6); }
-            body .modal .container #signup #mc_embed_signup form #mc_embed_signup_scroll .errors {
+            body .modal .container #signup #mc_embed_signup form #mc_embed_signup_scroll #errors {
+              height: 30px;
+              margin-bottom: 5px;
               text-align: left;
-              padding: 5px 20px;
-              color: red;
-              font-weight: 300;
-              height: 20px; }
+              padding: 0 25px; }
+              body .modal .container #signup #mc_embed_signup form #mc_embed_signup_scroll #errors p {
+                margin: 0;
+                color: red;
+                font-size: 18px; }
         body .modal .container #signup #signup-success {
           text-align: center;
           position: absolute;
@@ -1642,5 +1641,5 @@ body {
     font-size: 18px; } }
 @media (min-width: 1440px) {
   body section#hero {
-    background-image: url(../img/hero-bg.png);
+    background-image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.png);
     background-size: cover; } }

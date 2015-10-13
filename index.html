@@ -10,7 +10,7 @@
     <meta name="twitter:creator" content="@_mitchellporter">
     <meta name="twitter:title" content="Your safety is our priority | Eyelight">
     <meta name="twitter:description" content="Eyelight is an iOS app that helps keep you and your loved ones safe 24/7. We are doing everything the current safety apps are doing, and more… but we can’t say too much until we launch. Signup for beta to get early access.">
-    <meta name="twitter:image" content="assets/img/twittercard.png">
+    <meta name="twitter:image" content="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/twittercard.png">
     <title>Eyelight</title>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -55,15 +55,15 @@
       </div>
       <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/app-highlights.png" alt="app highlights" id="app-highlights-img"/>
       <div class="app-highlights">
-        <img src="assets/img/appFace.png" alt="app highlights" id="appFace" />
+        <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/appFace.png" alt="app highlights" id="appFace" />
         <!-- Dots -->
-        <img src="assets/img/pinkDot.png" alt="hightlight" id="pinkDot" class="dot" />
-        <img src="assets/img/greenDot.png" alt="hightlight" id="greenDot" class="dot" />
-        <img src="assets/img/cyanDot.png" alt="hightlight" id="cyanDot" class="dot" />
+        <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/pinkDot.png" alt="hightlight" id="pinkDot" class="dot" />
+        <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/greenDot.png" alt="hightlight" id="greenDot" class="dot" />
+        <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/cyanDot.png" alt="hightlight" id="cyanDot" class="dot" />
         <!-- Paths to FAQ -->
-        <img src="assets/img/pink-path.svg" alt="dashed line" id="pinkPath" class="path"/>
-        <img src="assets/img/green-path.svg" alt="dashed line" id="greenPath" class="path"/>
-        <img src="assets/img/cyan-path.svg" alt="dashed line" id="cyanPath" class="path"/>
+        <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/pink-path.svg" alt="dashed line" id="pinkPath" class="path"/>
+        <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/green-path.svg" alt="dashed line" id="greenPath" class="path"/>
+        <img src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/cyan-path.svg" alt="dashed line" id="cyanPath" class="path"/>
         <!-- FAQ -->
         <div class="FAQ" id="pinkFAQ">
           <p class="question">Can you tell if I might be in danger?</p>
@@ -106,7 +106,6 @@
 
     <div class="overlay">
       <div class="modal">
-        <!-- <img id="modal-bg" src="http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-bg.png" alt="background design" /> -->
         <div class="close-btn">
           <i class="ion-ios-close-outline"></i>
         </div>
@@ -115,16 +114,13 @@
           <h2>Welcome to Beta!</h2>
           <p>
             We are really excited to build this app so we can start helping people like you stay safe 24/7. Please take a minute
-            to invite some friends to sign up, you never know who you migh thelp save.
+            to invite some friends to sign up, you never know who you might help save.
           </p>
           <div id="signup">
             <div id="mc_embed_signup">
-              <!-- <form action="//designfirstapps.us11.list-manage.com/subscribe/post?u=94a520c136f1e4c51f1856478&amp;id=6fe708dae2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> -->
-              <form method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+              <form action="//designfirstapps.us11.list-manage.com/subscribe/post-json?u=94a520c136f1e4c51f1856478&amp;id=6fe708dae2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
-                  <div class="errors">
-                    <span id="errorMessages"></span>
-                  </div>
+                  <div id="errors"></div>
                   <div class="mc-field-group">
                     <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter email address" required>
                   </div>
@@ -152,7 +148,6 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
     <script type="text/javascript" src="assets/js/min/functions-min.js"></script>
   </body>
 </html>

@@ -78,24 +78,6 @@ $(function() {
     $(this).addClass('flip');
   });
 
-  $pDot.click(function(){
-    $(this).toggleClass('pulse-pink');
-    $pPath.toggleClass('activePath');
-    $pFAQ.toggleClass('activeFAQ');
-  });
-
-  $gDot.click(function(){
-    $(this).toggleClass('pulse-green');
-    $gPath.toggleClass('activePath');
-    $gFAQ.toggleClass('activeFAQ');
-  });
-
-  $cDot.click(function(){
-    $(this).toggleClass('pulse-cyan');
-    $cPath.toggleClass('activePath');
-    $cFAQ.toggleClass('activeFAQ');
-  });
-
 // Contact Us Overlay
   $('.cta').on('click', function(){
     $overlay.addClass('is-open');
@@ -108,35 +90,64 @@ $(function() {
     $overlay.removeClass('is-open');
     $formSuccess.fadeOut('slow');
     $inputs.fadeIn('slow');
+    $('#errorMessage').remove();
+    $("input[type='email']").css('border', 'none');
     $modal.addClass('slideOutUp').one(animationEnd, function(){
       $(this).removeClass('slideOutUp');
     });
   });
 
-// Form submit
-  $form.validate({
-    rules: {
-      EMAIL: {
-        required: true,
-        email: true
-      }
-    },
-    messages: {
-      EMAIL: {
-        required: "* A valid email is required",
-        email: "* A valid email is required"
-      }
-    },
-    errorPlacement: function(error){
-      error.appendTo('#errorMessages').addClass('flash');
-    },
-    submitHandler: function(){
-      $.post(document.location.url, $(this).serialize(), function(){
-        $form[0].reset();
-        $formSuccess.fadeIn();
-        $inputs.hide();
-      });
+  $form.submit(function(e){
+    e.preventDefault();
+    if(!isValidEmail($form)){
+      $('#errorMessage').remove();
+      $('#errors').append("<p id='errorMessage'>A valid email is required.</p>");
+      $("input[type='email']").css({'border': '2px solid red', 'border-radius': '5px'});
+    } else {
+      submitSubscribeForm($form);
     }
   });
+
+  function isValidEmail($form) {
+    var email = $form.find("input[type='email']").val();
+    if (!email || !email.length) {
+        return false;
+    } else if (email.indexOf("@") === -1) {
+        return false;
+    }
+    return true;
+  }
+
+  function submitSubscribeForm($form) {
+    $.ajax({
+      type: 'GET',
+      url: $form.attr('action'),
+      data: $form.serialize(),
+      cache: false,
+      dataType: 'jsonp',
+      jsonp: 'c',
+      contentType: 'application/json; charset=utf-8',
+
+      error: function(error){
+        console.log(error, ' err err err');
+      },
+
+      success: function(data){
+        var resultMessage = data.msg || "Sorry, unable to subscribe. Please try again later.";
+
+        if(data.result !== "success"){
+          if(data.msg && data.msg.indexOf('already subscribed') >= 0){
+            resultMessage = "Looks like you've already subscribed. Thanks!";
+            $('#errorMessage').remove();
+            $('#errors').append("<p id='errorMessage'>"+ resultMessage +"</p>");
+          }
+        } else {
+          $form[0].reset();
+          $formSuccess.fadeIn();
+          $inputs.hide();
+        }
+      }
+    });
+  }
 
 });
