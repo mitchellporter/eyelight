@@ -1509,13 +1509,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/Phone.png": {
+	"\/assets\/img\/phone.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 20123,
-		"inputAbbreviatedPath": "\/assets\/img\/Phone.png",
-		"outputAbbreviatedPath": "\/assets\/img\/Phone.png",
+		"inputAbbreviatedPath": "\/assets\/img\/phone.png",
+		"outputAbbreviatedPath": "\/assets\/img\/phone.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1564,13 +1564,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/Watch.png": {
+	"\/assets\/img\/watch.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 15431,
-		"inputAbbreviatedPath": "\/assets\/img\/Watch.png",
-		"outputAbbreviatedPath": "\/assets\/img\/Watch.png",
+		"inputAbbreviatedPath": "\/assets\/img\/watch.png",
+		"outputAbbreviatedPath": "\/assets\/img\/watch.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
