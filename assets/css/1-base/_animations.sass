@@ -65,6 +65,12 @@
     box-shadow: 0 0 30px 10px rgba(255, 60, 118, 0.5)
     opacity: 1
 
+
+.pulse-pink
+  @include animation-name(pulse-pink)
+  @include animation-duration(1s)
+
+
 @include keyframes(pulse-green)
   0%
     box-shadow: 0 0 0 0 rgba(51, 180, 127, 0)
@@ -73,6 +79,12 @@
     box-shadow: 0 0 30px 10px rgba(51, 180, 127, 0.9)
     opacity: 1
 
+
+.pulse-green
+  @include animation-name(pulse-green)
+  @include animation-duration(1s)
+
+
 @include keyframes(pulse-cyan)
   0%
     box-shadow: 0 0 0 0 rgba(60, 252, 255, 0)
@@ -80,6 +92,11 @@
   50%
     box-shadow: 0 0 30px 10px rgba(60, 252, 255, 0.5)
     opacity: 1
+
+
+.pulse-cyan
+  @include animation-name(pulse-cyan)
+  @include animation-duration(1s)
 
 
 

@@ -5,7 +5,16 @@ $(function() {
       $formSuccess = $('#signup-success'),
       $overlay = $('.overlay'),
       $modal = $('.modal'),
-      animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+      animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+      $pDot = $('#pinkDot'),
+      $pPath = $('#pinkPath'),
+      $pFAQ = $('#pinkFAQ'),
+      $cDot = $('#cyanDot'),
+      $cPath = $('#cyanPath'),
+      $cFAQ = $('#cyanFAQ'),
+      $gDot = $('#greenDot'),
+      $gPath = $('#greenPath'),
+      $gFAQ = $('#greenFAQ');
 
   $('#toTop').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -40,8 +49,22 @@ $(function() {
       });
     }
 
-    if(wScroll > $('.app-highlights').offset().top - ($(window).height() / 1.33)){
-      $('#hint').addClass('fadeInUp');
+    if(wScroll > $('.app-highlights').offset().top - ($(window).height() / 2)){
+      $pDot.addClass('pulse-pink');
+      $pPath.addClass('activePath');
+      $pFAQ.addClass('activeFAQ');
+
+      setTimeout(function(){
+        $cDot.addClass('pulse-cyan');
+        $cPath.addClass('activePath');
+        $cFAQ.addClass('activeFAQ');
+      }, 500);
+
+      setTimeout(function(){
+        $gDot.addClass('pulse-green');
+        $gPath.addClass('activePath');
+        $gFAQ.addClass('activeFAQ');
+      }, 1000);
     }
 
     if(wScroll > $('.platform').offset().top - ($(window).height() / 1.25)){
@@ -55,24 +78,22 @@ $(function() {
     $(this).addClass('flip');
   });
 
-  $('.dot').click(function(){
-    $(this).toggleClass('activeHighlight');
-    $('p#hint').addClass('hide');
+  $pDot.click(function(){
+    $(this).toggleClass('pulse-pink');
+    $pPath.toggleClass('activePath');
+    $pFAQ.toggleClass('activeFAQ');
   });
 
-  $('#pinkDot').click(function(){
-    $('#pinkPath').toggleClass('activePath');
-    $('#pinkFAQ').toggleClass('activeFAQ');
+  $gDot.click(function(){
+    $(this).toggleClass('pulse-green');
+    $gPath.toggleClass('activePath');
+    $gFAQ.toggleClass('activeFAQ');
   });
 
-  $('#greenDot').click(function(){
-    $('#greenPath').toggleClass('activePath');
-    $('#greenFAQ').toggleClass('activeFAQ');
-  });
-
-  $('#cyanDot').click(function(){
-    $('#cyanPath').toggleClass('activePath');
-    $('#cyanFAQ').toggleClass('activeFAQ');
+  $cDot.click(function(){
+    $(this).toggleClass('pulse-cyan');
+    $cPath.toggleClass('activePath');
+    $cFAQ.toggleClass('activeFAQ');
   });
 
 // Contact Us Overlay

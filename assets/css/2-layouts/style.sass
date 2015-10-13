@@ -125,20 +125,6 @@ body
       height: 480px
       margin: 0 auto
 
-      #hint
-        margin: 0
-        color: #666
-        position: absolute
-        left: 0
-        right: 0
-        top: 0
-        opacity: 0
-        transition: all 300ms ease-out
-        font-size: 24px
-
-        &.fadeInUp
-          opacity: 1
-
       #appFace
         position: absolute
         top: 75px
@@ -147,30 +133,20 @@ body
       .dot
         position: absolute
         border-radius: 50%
-        opacity: 0.6
         cursor: pointer
         z-index: 1
 
       #pinkDot
         top: 255px
         right: 700px
-        @include animation(pulse-pink 2.5s infinite)
 
       #cyanDot
         top: 335px
         right: 640px
-        @include animation(pulse-cyan 2.5s 0.33s infinite)
 
       #greenDot
         top: 170px
         right: 435px
-        @include animation(pulse-green 2.5s 0.66s infinite)
-
-      #pinkDot.activeHighlight,
-      #cyanDot.activeHighlight,
-      #greenDot.activeHighlight
-        @include animation(none)
-        opacity: 1
 
       .path
         position: absolute
@@ -212,7 +188,7 @@ body
         .question
           font-size: 18px
           font-weight: 600
-          line-height: 2
+          margin-bottom: 5px
 
         .answer
           font-size: 14px
@@ -638,5 +614,5 @@ body
   body
     section#hero
       background:
-        image: url(.../img/hero-bg.png)
+        image: url(../img/hero-bg.png)
         size: cover

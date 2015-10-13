@@ -499,6 +499,14 @@ th {
   50% {
     box-shadow: 0 0 30px 10px rgba(255, 60, 118, 0.5);
     opacity: 1; } }
+.pulse-pink {
+  -webkit-animation-name: pulse-pink;
+  -moz-animation-name: pulse-pink;
+  animation-name: pulse-pink;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
 @-webkit-keyframes pulse-green {
   0% {
     box-shadow: 0 0 0 0 rgba(51, 180, 127, 0); }
@@ -517,6 +525,14 @@ th {
   50% {
     box-shadow: 0 0 30px 10px rgba(51, 180, 127, 0.9);
     opacity: 1; } }
+.pulse-green {
+  -webkit-animation-name: pulse-green;
+  -moz-animation-name: pulse-green;
+  animation-name: pulse-green;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
 @-webkit-keyframes pulse-cyan {
   0% {
     box-shadow: 0 0 0 0 rgba(60, 252, 255, 0); }
@@ -535,6 +551,14 @@ th {
   50% {
     box-shadow: 0 0 30px 10px rgba(60, 252, 255, 0.5);
     opacity: 1; } }
+.pulse-cyan {
+  -webkit-animation-name: pulse-cyan;
+  -moz-animation-name: pulse-cyan;
+  animation-name: pulse-cyan;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+
 @-webkit-keyframes flash {
   from, 50%, to {
     opacity: 1; }
@@ -1122,18 +1146,6 @@ body {
     max-width: 1215px;
     height: 480px;
     margin: 0 auto; }
-    body main .app-highlights #hint {
-      margin: 0;
-      color: #666;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      opacity: 0;
-      transition: all 300ms ease-out;
-      font-size: 24px; }
-      body main .app-highlights #hint.fadeInUp {
-        opacity: 1; }
     body main .app-highlights #appFace {
       position: absolute;
       top: 75px;
@@ -1141,34 +1153,17 @@ body {
     body main .app-highlights .dot {
       position: absolute;
       border-radius: 50%;
-      opacity: 0.6;
       cursor: pointer;
       z-index: 1; }
     body main .app-highlights #pinkDot {
       top: 255px;
-      right: 700px;
-      -webkit-animation: pulse-pink 2.5s infinite;
-      -moz-animation: pulse-pink 2.5s infinite;
-      animation: pulse-pink 2.5s infinite; }
+      right: 700px; }
     body main .app-highlights #cyanDot {
       top: 335px;
-      right: 640px;
-      -webkit-animation: pulse-cyan 2.5s 0.33s infinite;
-      -moz-animation: pulse-cyan 2.5s 0.33s infinite;
-      animation: pulse-cyan 2.5s 0.33s infinite; }
+      right: 640px; }
     body main .app-highlights #greenDot {
       top: 170px;
-      right: 435px;
-      -webkit-animation: pulse-green 2.5s 0.66s infinite;
-      -moz-animation: pulse-green 2.5s 0.66s infinite;
-      animation: pulse-green 2.5s 0.66s infinite; }
-    body main .app-highlights #pinkDot.activeHighlight,
-    body main .app-highlights #cyanDot.activeHighlight,
-    body main .app-highlights #greenDot.activeHighlight {
-      -webkit-animation: none;
-      -moz-animation: none;
-      animation: none;
-      opacity: 1; }
+      right: 435px; }
     body main .app-highlights .path {
       position: absolute;
       opacity: 0;
@@ -1205,7 +1200,7 @@ body {
       body main .app-highlights #greenFAQ.activeFAQ .question {
         font-size: 18px;
         font-weight: 600;
-        line-height: 2; }
+        margin-bottom: 5px; }
       body main .app-highlights #pinkFAQ.activeFAQ .answer,
       body main .app-highlights #cyanFAQ.activeFAQ .answer,
       body main .app-highlights #greenFAQ.activeFAQ .answer {
@@ -1647,5 +1642,5 @@ body {
     font-size: 18px; } }
 @media (min-width: 1440px) {
   body section#hero {
-    background-image: url(.../img/hero-bg.png);
+    background-image: url(../img/hero-bg.png);
     background-size: cover; } }
