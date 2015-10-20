@@ -3,98 +3,127 @@ body
   text-align: center
   position: relative
 
+  .container
+    max-width: 1078px
+    margin: 0 auto
+    padding: 0 20px
+
   nav
     background: rgba(0,0,0,0.17)
     position: fixed
     width: 100%
-    height: 52px
     text-align: left
-    z-index: 1
+    z-index: 2
 
-    #eyelight-logo
-      background:
-        image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/eyelight-icon.png)
-      display: inline-block
-      width: 53px
-      height: 52px
-      position: relative
+    .container
+      #eyelight-logo
+        background:
+          image: url(http://d2aj6g1i6j6zds.cloudfront.net/assets/img/eyelight-icon.png)
+          size: 35px 35px
+          repeat: no-repeat
+        display: inline-block
+        width: 35px
+        height: 35px
+        position: relative
+        border-radius: 12px
+        margin-top: 5px
 
-      #blink
-        background: $pink
-        width: 30.5px
-        height: 31px
-        border-radius: 50%
-        position: absolute
-        top: 11px
-        left: 11px
-        transition: all 300ms ease-in-out
-        @include transform(rotateX(90deg))
-        @include transform-origin(50% 0%)
+        #blink
+          background: $pink
+          width: 24.5px
+          height: 22px
+          border-radius: 50%
+          position: absolute
+          top: 11px
+          left: 8px
+          transition: all 300ms ease-in-out
+          @include transform(rotateX(90deg))
+          @include transform-origin(50% 0%)
 
-        #blink.blink
-          height: 31px
+          #blink.blink
+            height: 31px
 
-    h1
-      display: inline-block
-      margin: 0
-      padding: 8px 0
-      vertical-align: top
-      color: $white
-      font-weight: 100
-      font-size: 30px
+      #eyelight-text
+        height: 30px
 
-    a
-      text-decoration: none
+      a
+        text-decoration: none
 
-    #about-link
-      float: right
-      color: $white
-      background: rgba(0,0,0,0.4)
-      font-size: 12px
-      padding: 7px 27px
-      border-radius: 5px
-      display: inline-block
-      margin: 11px 11px 0 0
+      #about-link
+        float: right
+        color: $white
+        background: rgba(0,0,0,0.4)
+        font-size: 12px
+        padding: 7px 27px
+        border-radius: 5px
+        display: inline-block
+        margin-top: 11px
 
-      &:hover
-        box-shadow: inset 0 0 5px rgba(0,0,0,0.25)
-        transition: all 200ms ease-in-out
+        &:hover
+          box-shadow: inset 0 0 5px rgba(0,0,0,0.25)
+          transition: all 200ms ease-in-out
 
   section#hero
     height: 673px
     background:
-      image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.png)
+      image: url(../img/BG.jpg)
+      position: center top
+      attachment: fixed
     color: $white
     @include display(flex)
     @include align-items(center)
     @include justify-content(center)
+    position: relative
+    overflow: hidden
 
     #mobileContent
       display: none
 
-    h2
-      margin: 9px
-      font-size: 64px
-      font-weight: 400
-      @include animation-delay(0s)
+    .content
+      z-index: 1
 
-    p
-      margin: 0
-      font-size: 20px
-      font-weight: 100
-      opacity: 0.8
-      @include animation-delay(0.05s)
+      h2
+        margin: 9px
+        font-size: 50px
+        font-weight: 400
+        @include animation-delay(0s)
 
-    .cta
-      border: 2px solid rgba($white, 0.45)
-      margin-top: 84px
-      @include animation-delay(0.1s)
+      p
+        margin: 0
+        font-size: 20px
+        font-weight: 100
+        opacity: 0.8
+        @include animation-delay(0.05s)
+
+      .cta
+        background: $mint
+        border: 2px solid $mint
+        color: black
+        border-radius: 40px
+        margin-top: 84px
+        font-size: 22px
+        @include animation-delay(0.1s)
+
+        &:hover
+          background: $paleGreen
+          border: 2px solid $paleGreen
+          color: white
+
+    #blur
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background:
+        image: url(../img/BG-blur1.jpg)
+        position: center top
+        attachment: fixed
+      opacity: 0
+
 
   main
     .container
-      max-width: 1078px
-      margin: 0 auto
-      padding: 0 20px
 
       h2,
       h3
@@ -137,11 +166,11 @@ body
 
       #pinkDot
         top: 255px
-        right: 700px
+        right: 650px
 
       #cyanDot
-        top: 335px
-        right: 640px
+        top: 260px
+        right: 570px
 
       #greenDot
         top: 170px
@@ -160,10 +189,10 @@ body
 
       #pinkPath
         top: 39px
-        right: 705px
+        right: 655px
 
       #cyanPath
-        top: 339px
+        top: 273px
         right: 425px
 
       #greenPath
@@ -196,16 +225,17 @@ body
 
       #pinkFAQ
         width: 295px
-        right: 810px
+        right: 770px
         top: 20px
 
         .question
           color: $pink
+          background: $white
 
       #cyanFAQ
         width: 410px
         right: 0
-        top: 322px
+        top: 340px
 
         .question
           color: $cyan2
@@ -251,7 +281,6 @@ body
 
         .cta
           background: $pink
-          border: 2px
           margin: 71px 0 92px
 
 
@@ -285,6 +314,7 @@ body
     padding: 15px 75px
     display: inline-block
 
+
   // Overlay
   .overlay
     background: rgba(0,0,0,0.75)
@@ -297,6 +327,7 @@ body
     opacity: 0
     pointer-events: none
     transition: all 750ms ease-in-out
+    z-index: 3
 
     &.is-open
       opacity: 1
@@ -306,12 +337,12 @@ body
     max-width: 100%
     background:
       color: $lightGrey
-      // image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/overlay-bg.png)
       repeat: no-repeat
       position: bottom right
     padding: 30px
     box-shadow: 0 20px 0px rgba(0,0,0,0.4)
     position: relative
+    z-index: 4
 
     .close-btn
       position: absolute
@@ -340,17 +371,17 @@ body
 
       h2
         font-weight: 300
-        font-size: 36px
+        font-size: 44px
         display: inline-block
         vertical-align: top
         margin: 71px 0 0
-        line-height: 1.1
+        line-height: 0.9
 
       p
         line-height: 1.5
         font-weight: 300
         font-size: 14px
-        margin: 40px 0 45px
+        margin: 0 0 45px
         padding: 5px
         color: $grey2
 
@@ -446,29 +477,35 @@ body
         left: 20%
 
       #pinkDot
-        left: 36.2%
+        left: 41%
 
       #cyanDot
-        left: 43%
+        left: 47%
+        top: 50%
 
       #greenDot
         right: 38.7%
 
       #pinkPath
-        right: 63%
+        right: 58.4%
 
       #cyanPath
-        width: 14.5vw
+        width: 11.8vw
+        right: 40%
+        top: 53%
 
       #greenPath
         left: 60.5%
 
       #pinkFAQ
-        left: 10px
+        left: 3%
         background: $white
 
       #greenFAQ
         background: $white
+
+      #cyanFAQ
+        left: 60%
 
 @media (max-width: 1023px)
   body main
@@ -542,7 +579,7 @@ body
 
         p
           font-size: 18px
-          opacity: 0.6
+          opacity: 0.7
 
     main
       #platforms
@@ -594,15 +631,16 @@ body
     .modal
       .container
         img
-          margin: 15px 12px
+          margin: 40px 5px 0
 
         h2
-          margin: 15px 0 0
-          font-size: 7.8vw
+          margin: 40px 0 0
+          font-size: 6.825vw
           line-height: 1.5
 
         p
-          margin: 10px 0 20px
+          margin: 40px 0 0
+
 
 @media (max-width: 330px)
   body main .container
@@ -610,9 +648,8 @@ body
       font-size: 18px
 
 
-@media (min-width: 1440px)
+@media (min-width: 2466px)
   body
     section#hero
       background:
-        image: url(http://eyelight.s3-us-west-2.amazonaws.com/assets/img/hero-bg.png)
         size: cover

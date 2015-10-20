@@ -5,6 +5,7 @@ $(function() {
       $formSuccess = $('#signup-success'),
       $overlay = $('.overlay'),
       $modal = $('.modal'),
+      $modalContent = $('.modal .container'),
       animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
       $pDot = $('#pinkDot'),
       $pPath = $('#pinkPath'),
@@ -29,7 +30,7 @@ $(function() {
     }
   });
 
-  $('#eyelight-logo').click(function(){
+  $('#eyelight-logo, #eyelight-text').click(function(){
     $('#blink').addClass('blink').one(animationEnd, function(){
       $(this).removeClass('blink');
     });
@@ -38,7 +39,55 @@ $(function() {
   $(window).scroll(function(){
     var wScroll = $(this).scrollTop(),
         $statement = $('main .container p'),
-        $statementSpan = $('main .container p span');
+        $statementSpan = $('main .container p span'),
+        $hero = $('#hero').height(),
+        $heroContent = $('#hero .content'),
+        $heroBlur = $('#hero #blur'),
+        $winWidth = $(window).width(),
+        isMobile = false,
+        range = 250;
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      isMobile = true;
+    }
+
+    if(wScroll <= $hero){
+      var blurVal = ($(this).scrollTop() / 550),
+          hOffset = $heroContent.offset().top,
+          opacityCalc = 1 - (wScroll - hOffset + range) / range;
+
+      if(blurVal > '1'){
+        blurVal = 1;
+      }
+
+      if(isMobile === false){
+        $heroBlur.css({
+          'opacity' : blurVal
+        });
+
+        $heroContent.css({
+          'opacity' : opacityCalc
+        });
+      }
+
+      if(isMobile === false){
+        if($winWidth >= 815){
+          $heroContent.css({
+            'transform' : 'translate(0px, '+ wScroll /3.5 +'%)'
+          });
+        }
+        if($winWidth < 815) {
+          $heroContent.css({
+            'transform' : 'translate(0px, '+ wScroll /4.5 +'%)'
+          });
+        }
+        if($winWidth < 668) {
+          $heroContent.css({
+            'transform' : 'translate(0px, '+ wScroll /5.4 +'%)'
+          });
+        }
+      }
+    }
 
     if(wScroll > $statement.offset().top - ($(window).height() / 1.25)){
       $statement.animate({'opacity':'1'}, 500);
@@ -84,6 +133,9 @@ $(function() {
     $modal.addClass('bounceInDown').one(animationEnd, function(){
       $(this).removeClass('bounceInDown');
     });
+    $modalContent.addClass('bounceInDown2').one(animationEnd, function(){
+      $(this).removeClass('bounceInDown2');
+    });
   });
 
   $('.close-btn').on('click', function(){
@@ -94,6 +146,9 @@ $(function() {
     $("input[type='email']").css('border', 'none');
     $modal.addClass('slideOutUp').one(animationEnd, function(){
       $(this).removeClass('slideOutUp');
+    });
+    $modalContent.addClass('slideOutUp2').one(animationEnd, function(){
+      $(this).removeClass('slideOutUp2');
     });
   });
 
@@ -128,9 +183,9 @@ $(function() {
       jsonp: 'c',
       contentType: 'application/json; charset=utf-8',
 
-      error: function(error){
-        console.log(error, ' err err err');
-      },
+      // error: function(error){
+      //   console.log(error, ' err err err');
+      // },
 
       success: function(data){
         var resultMessage = data.msg || "Sorry, unable to subscribe. Please try again later.";
