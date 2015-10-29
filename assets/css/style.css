@@ -1145,11 +1145,13 @@ th {
   -moz-animation-duration: 1s;
   animation-duration: 1s; }
 
+.no-tap {
+  -webkit-tap-highlight-color: transparent; }
+
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
-  position: relative;
-  overflow-x: hidden; }
+  position: relative; }
   body .container {
     max-width: 1078px;
     margin: 0 auto;
@@ -1211,7 +1213,7 @@ body {
         transition: all 200ms ease-in-out; }
   body section#hero {
     height: 673px;
-    background-image: url(http://d2aj6g1i6j6zds.cloudfront.net/assets/img/hero-bg.jpg);
+    background-image: url(../img/heroBG.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -1243,6 +1245,13 @@ body {
     -ms-flex-pack: center;
     position: relative;
     overflow: hidden; }
+    body section#hero #hero-overlay {
+      background: rgba(20, 35, 58, 0.75);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
     body section#hero #mobileContent {
       display: none; }
     body section#hero .content {
@@ -1282,7 +1291,8 @@ body {
       background-image: url(http://d2aj6g1i6j6zds.cloudfront.net/assets/img/hero-bg-blur.jpg);
       background-position: center top;
       background-attachment: fixed;
-      opacity: 0; }
+      opacity: 0;
+      display: none; }
   body main #app-intro {
     background-image: url(http://d2aj6g1i6j6zds.cloudfront.net/assets/img/main-img.jpg);
     background-repeat: no-repeat;
@@ -1290,21 +1300,34 @@ body {
     background-size: cover;
     height: 730px;
     color: #ffffff;
-    padding: 70px 0; }
-    body main #app-intro .container p {
-      font-weight: 300;
-      margin: 0 auto;
-      max-width: 632px;
+    padding: 70px 0;
+    position: relative;
+    overflow: hidden; }
+    body main #app-intro .container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 30%;
       opacity: 0; }
-    body main #app-intro .container #slogan {
-      font-size: 24px;
-      font-family: "Libre Baskerville", serif;
-      font-style: italic;
-      margin-bottom: 40px;
-      max-width: none; }
+      body main #app-intro .container.mobile {
+        position: static; }
+      body main #app-intro .container p {
+        font-weight: 300;
+        margin: 0 auto;
+        max-width: 632px;
+        opacity: 1; }
+        body main #app-intro .container p.fadeMe {
+          opacity: 0; }
+      body main #app-intro .container #slogan {
+        font-size: 24px;
+        font-family: "Libre Baskerville", serif;
+        font-style: italic;
+        margin-bottom: 40px;
+        max-width: none; }
   body main #platforms {
     background: rgba(214, 214, 214, 0.22);
-    padding: 50px 0; }
+    padding: 50px 0;
+    overflow: hidden; }
     body main #platforms .container h3 {
       font-size: 64px;
       font-weight: 300;
@@ -1634,8 +1657,7 @@ body {
   body nav {
     display: none; }
   body section#hero {
-    height: 555px;
-    background-size: auto; }
+    height: 555px; }
     body section#hero #desktopContent {
       display: none; }
     body section#hero #mobileContent {
@@ -1676,10 +1698,16 @@ body {
   body .modal .container #signup #signup-success img {
     margin-top: 20px; } }
 @media (max-width: 500px) {
-  body main #app-intro .container #slogan2 {
-    display: none; } }
+  body main #app-intro .container {
+    top: 20%; }
+    body main #app-intro .container #slogan2 {
+      display: none; }
+  body main #app-intro .container.mobile {
+    top: 50px; }
+    body main #app-intro .container.mobile #slogan2 {
+      display: none; } }
 @media (max-width: 414px) {
-  body main .container {
+  body main #app-intro .container {
     padding: 0 20px; }
   body main #platforms h3 {
     font-size: 36px; }
@@ -1694,6 +1722,9 @@ body {
 @media (max-width: 330px) {
   body main .container .cta {
     font-size: 18px; } }
+@media (min-width: 1500px) {
+  body main #app-intro {
+    height: 1000px; } }
 @media (min-width: 2466px) {
   body section#hero {
     background-size: cover; } }

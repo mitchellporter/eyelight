@@ -16,16 +16,14 @@
     <meta property="og:image" content="http://d2aj6g1i6j6zds.cloudfront.net/assets/img/twittercard.jpg">
     <title>Eyelight</title>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<!-- DEV -->
     <link rel="stylesheet" href="assets/css/style.css">
-<!-- /DEV -->
     <link rel="icon" href="favicon.png" type="image/x-icon">
   </head>
   <body>
 
     <nav>
       <div class="container">
-        <a href="#hero" id="toTop">
+        <a href="#hero" id="toTop" class="no-tap">
           <div id="eyelight-logo">
             <div id="blink"></div>
           </div>
@@ -36,12 +34,13 @@
     </nav>
 
     <section id="hero">
+      <div id="hero-overlay"></div>
       <div class="content" id="desktopContent">
         <h2 class="animated bounceInUp">When you need help, we’ll be ready.</h2>
         <p class="animated bounceInUp">
           We'll help keep you and your loved ones safe when it counts.
         </p>
-        <a href="#" class="cta animated bounceInUp">Get Early Access</a>
+        <a href="#" class="cta animated bounceInUp no-tap">Get Early Access</a>
       </div>
       <div class="content" id="mobileContent">
         <img class="animated bounceInUp" src="http://d2aj6g1i6j6zds.cloudfront.net/assets/img/eye.png" alt="eyelight icon" />
@@ -49,7 +48,7 @@
         <p class="animated bounceInUp">
           Your safety is our priority
         </p>
-        <a href="#" class="cta animated bounceInUp">Get Early Access</a>
+        <a href="#" class="cta animated bounceInUp no-tap">Get Early Access</a>
       </div>
       <div id="blur"></div>
     </section>
@@ -58,7 +57,7 @@
       <section id="app-intro">
         <div class="container">
           <p id="slogan">
-            “Our mission is to push the boundries and do things no other safety app is doing”
+            “Our mission is to push the boundaries of personal safety and do things no other app is doing”
           </p>
           <p id="slogan2">
             We take personal safety serious. We keep you and your loved ones safe in all situations by using world class technology and intuitive designs.
@@ -81,7 +80,7 @@
             <img src="http://d2aj6g1i6j6zds.cloudfront.net/assets/img/iOS.png" alt="phone label" />
             <img src="http://d2aj6g1i6j6zds.cloudfront.net/assets/img/watch-word.png" alt="watch label" />
           </div>
-          <a href="#" class="cta">Get Early Access</a>
+          <a href="#" class="cta no-tap">Get Early Access</a>
         </div>
       </section>
     </main>
@@ -93,7 +92,7 @@
 
     <div class="overlay">
       <div class="modal">
-        <div class="close-btn">
+        <div class="close-btn no-tap">
           <i class="ion-ios-close-outline"></i>
         </div>
         <div class="container">
@@ -125,8 +124,8 @@
               <p>
                 Awesome! Check your inbox for confirmation.
               </p>
-              <a href="http://twitter.com/home?status=My%20personal%20safety%20just%20leveled%20up!%20I%20joined%20beta,%20come%20level%20up%20too%20@eyelightapp%20%23safetymatters%20&#128522;%20http%3A%2F%2Feyelight.io%2F" target="_blank"><img src="http://d2aj6g1i6j6zds.cloudfront.net/assets/img/overlay-twitter.png" alt="share on twitter" /></a>
-              <a href="http://www.facebook.com/share.php?u=http://eyelight.io" target="_blank"><img src="http://d2aj6g1i6j6zds.cloudfront.net/assets/img/overlay-facebook.png" alt="share on facebook" /></a>
+              <a href="http://twitter.com/home?status=My%20personal%20safety%20just%20leveled%20up!%20I%20joined%20beta,%20come%20level%20up%20too%20@eyelightapp%20%23safetymatters%20&#128522;%20http%3A%2F%2Feyelight.io%2F" target="_blank" class="no-tap"><img src="http://d2aj6g1i6j6zds.cloudfront.net/assets/img/overlay-twitter.png" alt="share on twitter" /></a>
+              <a href="http://www.facebook.com/share.php?u=http://eyelight.io" target="_blank" class="no-tap"><img src="http://d2aj6g1i6j6zds.cloudfront.net/assets/img/overlay-facebook.png" alt="share on facebook" /></a>
             </div>
           </div>
         </div>
@@ -134,8 +133,6 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<!-- DEV -->
     <script type="text/javascript" src="assets/js/min/functions-min.js"></script>
-<!-- /DEV -->
   </body>
 </html>

@@ -1,8 +1,10 @@
+.no-tap
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
 body
   font-family: $font
   text-align: center
   position: relative
-  overflow-x: hidden
 
   .container
     max-width: 1078px
@@ -69,7 +71,7 @@ body
   section#hero
     height: 673px
     background:
-      image: url(http://d2aj6g1i6j6zds.cloudfront.net/assets/img/hero-bg.jpg)
+      image: url(../img/heroBG.jpg)
       position: center
       size: cover
       attachment: fixed
@@ -79,6 +81,14 @@ body
     @include justify-content(center)
     position: relative
     overflow: hidden
+
+    #hero-overlay
+      background: rgba($deepBlue, .75)
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
 
     #mobileContent
       display: none
@@ -121,6 +131,7 @@ body
         position: center top
         attachment: fixed
       opacity: 0
+      display: none
 
 
   main
@@ -133,13 +144,27 @@ body
       height: 730px
       color: $white
       padding: 70px 0
+      position: relative
+      overflow: hidden
 
       .container
+        position: absolute
+        left: 0
+        right: 0
+        top: 30%
+        opacity: 0
+
+        &.mobile
+          position: static
+
         p
           font-weight: 300
           margin: 0 auto
           max-width: 632px
-          opacity: 0
+          opacity: 1
+
+          &.fadeMe
+            opacity: 0
 
         #slogan
           font-size: 24px
@@ -152,6 +177,7 @@ body
     #platforms
       background: rgba(#D6D6D6, 0.22)
       padding: 50px 0
+      overflow: hidden
 
       .container
         h3
@@ -419,8 +445,6 @@ body
 
     section#hero
       height: 555px
-      background:
-        size: auto
 
       #desktopContent
         display: none
@@ -474,16 +498,27 @@ body
               margin-top: 20px
 
 @media (max-width: 500px)
-  body main #app-intro .container
-    #slogan2
-      display: none
+  body main
+    #app-intro
+      .container
+        top: 20%
+
+        #slogan2
+          display: none
+
+      .container.mobile
+        top: 50px
+
+        #slogan2
+          display: none
 
 
 @media (max-width: 414px)
   body
     main
-      .container
-        padding: 0 20px
+      #app-intro
+        .container
+          padding: 0 20px
 
       #platforms
         h3
@@ -508,6 +543,10 @@ body
     .cta
       font-size: 18px
 
+@media (min-width: 1500px)
+  body main
+    #app-intro
+      height: 1000px
 
 @media (min-width: 2466px)
   body

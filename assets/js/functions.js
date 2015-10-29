@@ -6,7 +6,16 @@ $(function() {
       $overlay = $('.overlay'),
       $modal = $('.modal'),
       $modalContent = $('.modal .container'),
+      $sloganC = $('#app-intro .container'),
+      isMobile = false,
       animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    isMobile = true;
+    $sloganC.addClass('mobile');
+  }
+
 
   $('#toTop').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -31,64 +40,82 @@ $(function() {
     $(this).addClass('flip');
   });
 
+// On Scroll
   $(window).scroll(function(){
     var wScroll = $(this).scrollTop(),
-        $sloganP = $('#app-intro .container p'),
         $hero = $('#hero').height(),
         $heroContent = $('#hero .content'),
         $heroBlur = $('#hero #blur'),
         $winWidth = $(window).width(),
-        isMobile = false,
         range = 250;
 
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      isMobile = true;
-    }
 
-    if(wScroll <= $hero){
-      var blurVal = ($(this).scrollTop() / 550),
-          hOffset = $heroContent.offset().top,
-          opacityCalc = 1 - (wScroll - hOffset + range) / range;
+    if(isMobile === false){
 
-      if(blurVal > '1'){
-        blurVal = 1;
-      }
+      if(wScroll <= $hero){
+        var blurVal = ($(this).scrollTop() / 550),
+            hOffset = $heroContent.offset().top,
+            opacityCalc = 1 - (wScroll - hOffset + range) / range;
 
-      if(isMobile === false){
-        $heroBlur.css({
-          'opacity' : blurVal
-        });
+        if(blurVal > '1'){
+          blurVal = 1;
+        }
 
-        $heroContent.css({
-          'opacity' : opacityCalc
-        });
-      }
+        if($winWidth > 652){
+          $heroBlur.css({
+            'opacity' : blurVal
+          });
 
-      if(isMobile === false){
+          $heroContent.css({
+            'opacity' : opacityCalc
+          });
+        } else {
+          $heroContent.css({
+            'opacity' : '1'
+          });
+        }
+
+
+        if(wScroll >= $(window).height() / 8) {
+          $sloganC.css({
+            'transform' : 'translate(0px, -'+ wScroll / 4 +'%)',
+            'opacity' : wScroll / 400
+          });
+        }
+
         if($winWidth >= 815){
           $heroContent.css({
             'transform' : 'translate(0px, '+ wScroll /3.5 +'%)'
           });
         }
+
         if($winWidth < 815) {
           $heroContent.css({
             'transform' : 'translate(0px, '+ wScroll /4.5 +'%)'
           });
         }
+        
         if($winWidth < 668) {
           $heroContent.css({
             'transform' : 'translate(0px, '+ wScroll /5.4 +'%)'
           });
+          $sloganC.css({
+            'transform' : 'translate(0px, -'+ wScroll / 5 +'%)',
+            'opacity' : wScroll / 400
+          });
         }
+
       }
+
     }
 
-    if(wScroll > $sloganP.offset().top - ($(window).height() / 1.25)){
-      $sloganP.each(function(i){
-        setTimeout(function(){
-          $sloganP.eq(i).css({'opacity':'1', 'transition':'all 600ms ease-in-out'});
-        }, (750 * (Math.exp(i * 0.25))) - 500);
-      });
+
+
+    if(isMobile === true){
+      $sloganC.addClass('fadeMe');
+      if (wScroll > $sloganC.offset().top - ($(window).height() / 1.25)){
+        $sloganC.addClass('fadeMe').css({'opacity':'1', 'transition':'all 750ms ease-in-out'});
+      }
     }
 
     if(wScroll > $('.platform').offset().top - ($(window).height() / 1.25)){
@@ -97,6 +124,7 @@ $(function() {
     }
 
   });
+
 
 // Contact Us Overlay
   $('.cta').on('click', function(){
@@ -123,6 +151,7 @@ $(function() {
     });
   });
 
+// Mailchimp highjack
   $form.submit(function(e){
     e.preventDefault();
     if(!isValidEmail($form)){

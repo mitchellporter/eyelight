@@ -1421,6 +1421,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/heroBG.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 373931,
+		"inputAbbreviatedPath": "\/assets\/img\/heroBG.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/heroBG.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/iOS.png": {
 		"fileType": 32768,
 		"ignore": 0,
