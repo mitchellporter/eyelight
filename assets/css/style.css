@@ -1211,7 +1211,7 @@ body {
         transition: all 200ms ease-in-out; }
   body section#hero {
     height: 673px;
-    background-image: url(../img/hero-bg.jpg);
+    background-image: url(http://d2aj6g1i6j6zds.cloudfront.net/assets/img/hero-bg.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -1279,12 +1279,12 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      background-image: url(../img/hero-bg-blur.jpg);
+      background-image: url(http://d2aj6g1i6j6zds.cloudfront.net/assets/img/hero-bg-blur.jpg);
       background-position: center top;
       background-attachment: fixed;
       opacity: 0; }
   body main #app-intro {
-    background-image: url(../img/main-img.jpg);
+    background-image: url(http://d2aj6g1i6j6zds.cloudfront.net/assets/img/main-img.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

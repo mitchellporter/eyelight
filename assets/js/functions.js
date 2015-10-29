@@ -84,11 +84,10 @@ $(function() {
     }
 
     if(wScroll > $sloganP.offset().top - ($(window).height() / 1.25)){
-      // $sloganP.animate({'opacity':'1'}, 500);
       $sloganP.each(function(i){
         setTimeout(function(){
           $sloganP.eq(i).css({'opacity':'1', 'transition':'all 600ms ease-in-out'});
-        }, (1000 * (Math.exp(i * 0.25))) - 500);
+        }, (750 * (Math.exp(i * 0.25))) - 500);
       });
     }
 
