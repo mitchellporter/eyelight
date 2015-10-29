@@ -1355,17 +1355,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/assets\/img\/app-highlights.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 228997,
-		"inputAbbreviatedPath": "\/assets\/img\/app-highlights.png",
-		"outputAbbreviatedPath": "\/assets\/img\/app-highlights.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/assets\/img\/appeye.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1377,61 +1366,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/appFace.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 177705,
-		"inputAbbreviatedPath": "\/assets\/img\/appFace.png",
-		"outputAbbreviatedPath": "\/assets\/img\/appFace.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/BG-blur.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 66068,
-		"inputAbbreviatedPath": "\/assets\/img\/BG-blur.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/BG-blur.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/BG-blur1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 54719,
-		"inputAbbreviatedPath": "\/assets\/img\/BG-blur1.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/BG-blur1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/BG.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 220751,
-		"inputAbbreviatedPath": "\/assets\/img\/BG.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/BG.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/cyanDot.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 364,
-		"inputAbbreviatedPath": "\/assets\/img\/cyanDot.png",
-		"outputAbbreviatedPath": "\/assets\/img\/cyanDot.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/assets\/img\/eye.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1439,17 +1373,6 @@
 		"initialSize": 8836,
 		"inputAbbreviatedPath": "\/assets\/img\/eye.png",
 		"outputAbbreviatedPath": "\/assets\/img\/eye.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/eyelight-article.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 284299,
-		"inputAbbreviatedPath": "\/assets\/img\/eyelight-article.png",
-		"outputAbbreviatedPath": "\/assets\/img\/eyelight-article.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1476,13 +1399,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/greenDot.png": {
-		"fileType": 32768,
+	"\/assets\/img\/hero-bg-blur.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 384,
-		"inputAbbreviatedPath": "\/assets\/img\/greenDot.png",
-		"outputAbbreviatedPath": "\/assets\/img\/greenDot.png",
+		"initialSize": 58876,
+		"inputAbbreviatedPath": "\/assets\/img\/hero-bg-blur.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/hero-bg-blur.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1491,20 +1414,9 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 196807,
+		"initialSize": 146424,
 		"inputAbbreviatedPath": "\/assets\/img\/hero-bg.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/hero-bg.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/hero-bg.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 624304,
-		"inputAbbreviatedPath": "\/assets\/img\/hero-bg.png",
-		"outputAbbreviatedPath": "\/assets\/img\/hero-bg.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1520,13 +1432,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/overlay-bg.png": {
-		"fileType": 32768,
+	"\/assets\/img\/main-img.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 30093,
-		"inputAbbreviatedPath": "\/assets\/img\/overlay-bg.png",
-		"outputAbbreviatedPath": "\/assets\/img\/overlay-bg.png",
+		"initialSize": 169006,
+		"inputAbbreviatedPath": "\/assets\/img\/main-img.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/main-img.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1557,64 +1469,20 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 17914,
+		"initialSize": 17613,
 		"inputAbbreviatedPath": "\/assets\/img\/phone.png",
 		"outputAbbreviatedPath": "\/assets\/img\/phone.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/phone1.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 37482,
-		"inputAbbreviatedPath": "\/assets\/img\/phone1.png",
-		"outputAbbreviatedPath": "\/assets\/img\/phone1.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/pinkDot.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 369,
-		"inputAbbreviatedPath": "\/assets\/img\/pinkDot.png",
-		"outputAbbreviatedPath": "\/assets\/img\/pinkDot.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/Twittercard.jpg": {
+	"\/assets\/img\/twittercard.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 65043,
-		"inputAbbreviatedPath": "\/assets\/img\/Twittercard.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/Twittercard.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/twittercard.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 68976,
-		"inputAbbreviatedPath": "\/assets\/img\/twittercard.png",
-		"outputAbbreviatedPath": "\/assets\/img\/twittercard.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/twittercardEyelight.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 63966,
-		"inputAbbreviatedPath": "\/assets\/img\/twittercardEyelight.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/twittercardEyelight.jpg",
+		"initialSize": 63340,
+		"inputAbbreviatedPath": "\/assets\/img\/twittercard.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/twittercard.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1630,24 +1498,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/Watch.png": {
+	"\/assets\/img\/watch.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 15431,
-		"inputAbbreviatedPath": "\/assets\/img\/Watch.png",
-		"outputAbbreviatedPath": "\/assets\/img\/Watch.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/watch1.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 31048,
-		"inputAbbreviatedPath": "\/assets\/img\/watch1.png",
-		"outputAbbreviatedPath": "\/assets\/img\/watch1.png",
+		"inputAbbreviatedPath": "\/assets\/img\/watch.png",
+		"outputAbbreviatedPath": "\/assets\/img\/watch.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

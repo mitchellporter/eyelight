@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -1147,7 +1148,8 @@ th {
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
   body .container {
     max-width: 1078px;
     margin: 0 auto;
@@ -1166,8 +1168,8 @@ body {
       width: 35px;
       height: 35px;
       position: relative;
-      border-radius: 12px;
-      margin-top: 5px; }
+      border-radius: 10px;
+      margin: 8px 14px 4px 0; }
       body nav .container #eyelight-logo #blink {
         background: #FF3C76;
         width: 22px;
@@ -1190,16 +1192,18 @@ body {
         body nav .container #eyelight-logo #blink #blink.blink {
           height: 31px; }
     body nav .container #eyelight-text {
-      height: 30px; }
+      height: 30px;
+      position: absolute;
+      top: 14px; }
     body nav .container a {
       text-decoration: none; }
     body nav .container #about-link {
       float: right;
-      color: #ffffff;
+      color: #FF3C76;
       background: rgba(0, 0, 0, 0.4);
-      font-size: 12px;
+      font-size: 14px;
       padding: 7px 27px;
-      border-radius: 5px;
+      border-radius: 2px;
       display: inline-block;
       margin-top: 11px; }
       body nav .container #about-link:hover {
@@ -1207,8 +1211,9 @@ body {
         transition: all 200ms ease-in-out; }
   body section#hero {
     height: 673px;
-    background-image: url(../img/BG.jpg);
-    background-position: center top;
+    background-image: url(../img/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     color: #ffffff;
     display: -webkit-box;
@@ -1258,135 +1263,53 @@ body {
         -moz-animation-delay: 0.05s;
         animation-delay: 0.05s; }
       body section#hero .content .cta {
-        background: #00F56B;
-        border: 2px solid #00F56B;
+        background: #FF3C76;
         color: black;
-        border-radius: 40px;
         margin-top: 84px;
-        font-size: 22px;
+        color: #ffffff;
         -webkit-animation-delay: 0.1s;
         -moz-animation-delay: 0.1s;
         animation-delay: 0.1s; }
         body section#hero .content .cta:hover {
-          background: #289667;
-          border: 2px solid #289667;
-          color: white; }
+          background: #00F56B;
+          color: black; }
     body section#hero #blur {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      background-image: url(../img/BG-blur1.jpg);
+      background-image: url(../img/hero-bg-blur.jpg);
       background-position: center top;
       background-attachment: fixed;
       opacity: 0; }
-  body main .container h2,
-  body main .container h3 {
-    font-size: 64px;
-    font-weight: 300;
-    font-family: "Gill Sans", "Roboto", sans-serif; }
-  body main .container h3 {
-    opacity: 0.65; }
-  body main .container p {
-    max-width: 580px;
-    margin: 0 auto 77px;
-    font-weight: 300;
-    opacity: 0; }
-    body main .container p span {
-      opacity: 0;
-      font-weight: 600; }
-  body main #app-highlights-img {
-    display: none; }
-  body main .app-highlights {
-    position: relative;
-    padding-top: 50px;
-    max-width: 1215px;
-    height: 480px;
-    margin: 0 auto; }
-    body main .app-highlights #appFace {
-      position: absolute;
-      top: 75px;
-      right: 280px; }
-    body main .app-highlights .dot {
-      position: absolute;
-      border-radius: 50%;
-      z-index: 1; }
-    body main .app-highlights #pinkDot {
-      top: 255px;
-      right: 650px; }
-    body main .app-highlights #cyanDot {
-      top: 260px;
-      right: 570px; }
-    body main .app-highlights #greenDot {
-      top: 170px;
-      right: 435px; }
-    body main .app-highlights .path {
-      position: absolute;
-      opacity: 0;
-      transition: all 50ms linear; }
-    body main .app-highlights #pinkPath.activePath,
-    body main .app-highlights #cyanPath.activePath,
-    body main .app-highlights #greenPath.activePath {
-      opacity: 1;
-      transition: all 200ms linear; }
-    body main .app-highlights #pinkPath {
-      top: 39px;
-      right: 655px; }
-    body main .app-highlights #cyanPath {
-      top: 273px;
-      right: 425px; }
-    body main .app-highlights #greenPath {
-      top: 15px;
-      right: 300px; }
-    body main .app-highlights .FAQ {
-      position: absolute;
-      text-align: left;
+  body main #app-intro {
+    background-image: url(../img/main-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 730px;
+    color: #ffffff;
+    padding: 70px 0; }
+    body main #app-intro .container p {
+      font-weight: 300;
+      margin: 0 auto;
+      max-width: 632px;
       opacity: 0; }
-    body main .app-highlights #pinkFAQ.activeFAQ,
-    body main .app-highlights #cyanFAQ.activeFAQ,
-    body main .app-highlights #greenFAQ.activeFAQ {
-      opacity: 1;
-      transition: all 500ms linear; }
-      body main .app-highlights #pinkFAQ.activeFAQ p,
-      body main .app-highlights #cyanFAQ.activeFAQ p,
-      body main .app-highlights #greenFAQ.activeFAQ p {
-        margin: 0; }
-      body main .app-highlights #pinkFAQ.activeFAQ .question,
-      body main .app-highlights #cyanFAQ.activeFAQ .question,
-      body main .app-highlights #greenFAQ.activeFAQ .question {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 5px; }
-      body main .app-highlights #pinkFAQ.activeFAQ .answer,
-      body main .app-highlights #cyanFAQ.activeFAQ .answer,
-      body main .app-highlights #greenFAQ.activeFAQ .answer {
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 1.25; }
-    body main .app-highlights #pinkFAQ {
-      width: 295px;
-      right: 770px;
-      top: 20px; }
-      body main .app-highlights #pinkFAQ .question {
-        color: #FF3C76;
-        background: #ffffff; }
-    body main .app-highlights #cyanFAQ {
-      width: 410px;
-      right: 0;
-      top: 340px; }
-      body main .app-highlights #cyanFAQ .question {
-        color: #32D5D8; }
-    body main .app-highlights #greenFAQ {
-      width: 260px;
-      right: 30px;
-      top: 0; }
-      body main .app-highlights #greenFAQ .question {
-        color: #33B47F; }
+    body main #app-intro .container #slogan {
+      font-size: 24px;
+      font-family: "Libre Baskerville", serif;
+      font-style: italic;
+      margin-bottom: 40px;
+      max-width: none; }
   body main #platforms {
     background: rgba(214, 214, 214, 0.22);
-    padding: 50px 0;
-    margin-top: 75px; }
+    padding: 50px 0; }
+    body main #platforms .container h3 {
+      font-size: 64px;
+      font-weight: 300;
+      font-family: "Gill Sans", "Roboto", sans-serif;
+      opacity: 0.65; }
     body main #platforms .container .row {
       display: -webkit-box;
       display: -moz-box;
@@ -1460,7 +1383,7 @@ body {
       background: #FF3C76;
       margin: 71px 0 92px; }
   body footer {
-    background: #2B313A;
+    background: #132234;
     height: 180px;
     display: -webkit-box;
     display: -moz-box;
@@ -1512,8 +1435,8 @@ body {
   body .cta {
     text-decoration: none;
     color: #ffffff;
-    border-radius: 6px;
-    padding: 15px 75px;
+    border-radius: 40px;
+    padding: 15px 70px;
     display: inline-block; }
   body .overlay {
     background: rgba(0, 0, 0, 0.75);
@@ -1654,43 +1577,7 @@ body {
   body .hide {
     display: none; }
 
-@media (max-width: 1140px) {
-  body main .app-highlights #appFace {
-    left: 20%; }
-  body main .app-highlights #pinkDot {
-    left: 41%; }
-  body main .app-highlights #cyanDot {
-    left: 47%;
-    top: 50%; }
-  body main .app-highlights #greenDot {
-    right: 38.7%; }
-  body main .app-highlights #pinkPath {
-    right: 58.4%; }
-  body main .app-highlights #cyanPath {
-    width: 11.8vw;
-    right: 40%;
-    top: 53%; }
-  body main .app-highlights #greenPath {
-    left: 60.5%; }
-  body main .app-highlights #pinkFAQ {
-    left: 3%;
-    background: #ffffff; }
-  body main .app-highlights #greenFAQ {
-    background: #ffffff; }
-  body main .app-highlights #cyanFAQ {
-    left: 60%; } }
-@media (max-width: 1023px) {
-  body main #app-highlights-img {
-    display: block;
-    width: 95%;
-    margin: 0 auto; }
-  body main .app-highlights {
-    display: none; } }
 @media (max-width: 767px) {
-  body main #app-highlights-img {
-    display: none; }
-  body main .app-highlights {
-    display: none; }
   body main #platforms .container .row .platform {
     margin: 0 auto 90px;
     border-radius: 50%;
@@ -1747,7 +1634,8 @@ body {
   body nav {
     display: none; }
   body section#hero {
-    height: 555px; }
+    height: 555px;
+    background-size: auto; }
     body section#hero #desktopContent {
       display: none; }
     body section#hero #mobileContent {
@@ -1757,7 +1645,7 @@ body {
         font-weight: 100; }
       body section#hero #mobileContent p {
         font-size: 18px;
-        opacity: 0.7; }
+        font-weight: 300; }
   body main #platforms .container h2 {
     margin: 50px 0 27px; }
   body main #platforms .container h3 {
@@ -1787,12 +1675,14 @@ body {
     margin: 10px 0 20px; }
   body .modal .container #signup #signup-success img {
     margin-top: 20px; } }
+@media (max-width: 500px) {
+  body main #app-intro .container #slogan2 {
+    display: none; } }
 @media (max-width: 414px) {
   body main .container {
     padding: 0 20px; }
-    body main .container h2,
-    body main .container h3 {
-      font-size: 36px; }
+  body main #platforms h3 {
+    font-size: 36px; }
   body .modal .container img {
     margin: 40px 5px 0; }
   body .modal .container h2 {

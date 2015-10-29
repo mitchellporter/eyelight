@@ -2,6 +2,7 @@ body
   font-family: $font
   text-align: center
   position: relative
+  overflow-x: hidden
 
   .container
     max-width: 1078px
@@ -25,8 +26,8 @@ body
         width: 35px
         height: 35px
         position: relative
-        border-radius: 12px
-        margin-top: 5px
+        border-radius: 10px
+        margin: 8px 14px 4px 0
 
         #blink
           background: $pink
@@ -45,17 +46,19 @@ body
 
       #eyelight-text
         height: 30px
+        position: absolute
+        top: 14px
 
       a
         text-decoration: none
 
       #about-link
         float: right
-        color: $white
+        color: $pink
         background: rgba(0,0,0,0.4)
-        font-size: 12px
+        font-size: 14px
         padding: 7px 27px
-        border-radius: 5px
+        border-radius: 2px
         display: inline-block
         margin-top: 11px
 
@@ -66,8 +69,9 @@ body
   section#hero
     height: 673px
     background:
-      image: url(../img/BG.jpg)
-      position: center top
+      image: url(../img/hero-bg.jpg)
+      position: center
+      size: cover
       attachment: fixed
     color: $white
     @include display(flex)
@@ -96,18 +100,15 @@ body
         @include animation-delay(0.05s)
 
       .cta
-        background: $mint
-        border: 2px solid $mint
+        background: $pink
         color: black
-        border-radius: 40px
         margin-top: 84px
-        font-size: 22px
+        color: $white
         @include animation-delay(0.1s)
 
         &:hover
-          background: $paleGreen
-          border: 2px solid $paleGreen
-          color: white
+          background: $mint
+          color: black
 
     #blur
       position: absolute
@@ -116,144 +117,50 @@ body
       bottom: 0
       left: 0
       background:
-        image: url(../img/BG-blur1.jpg)
+        image: url(../img/hero-bg-blur.jpg)
         position: center top
         attachment: fixed
       opacity: 0
 
 
   main
-    .container
+    #app-intro
+      background:
+        image: url(../img/main-img.jpg)
+        repeat: no-repeat
+        position: center
+        size: cover
+      height: 730px
+      color: $white
+      padding: 70px 0
 
-      h2,
-      h3
-        font-size: 64px
-        font-weight: 300
-        font-family: 'Gill Sans', $font
-
-      h3
-        opacity: 0.65
-
-      p
-        max-width: 580px
-        margin: 0 auto 77px
-        font-weight: 300
-        opacity: 0
-
-        span
-          opacity: 0
-          font-weight: 600
-
-    #app-highlights-img
-      display: none
-
-    .app-highlights
-      position: relative
-      padding-top: 50px
-      max-width: 1215px
-      height: 480px
-      margin: 0 auto
-
-      #appFace
-        position: absolute
-        top: 75px
-        right: 280px
-
-      .dot
-        position: absolute
-        border-radius: 50%
-        z-index: 1
-
-      #pinkDot
-        top: 255px
-        right: 650px
-
-      #cyanDot
-        top: 260px
-        right: 570px
-
-      #greenDot
-        top: 170px
-        right: 435px
-
-      .path
-        position: absolute
-        opacity: 0
-        transition: all 50ms linear
-
-      #pinkPath.activePath,
-      #cyanPath.activePath,
-      #greenPath.activePath
-        opacity: 1
-        transition: all 200ms linear
-
-      #pinkPath
-        top: 39px
-        right: 655px
-
-      #cyanPath
-        top: 273px
-        right: 425px
-
-      #greenPath
-        top: 15px
-        right: 300px
-
-      .FAQ
-        position: absolute
-        text-align: left
-        opacity: 0
-
-      #pinkFAQ.activeFAQ,
-      #cyanFAQ.activeFAQ,
-      #greenFAQ.activeFAQ
-        opacity: 1
-        transition: all 500ms linear
-
+      .container
         p
-          margin: 0
-
-        .question
-          font-size: 18px
-          font-weight: 600
-          margin-bottom: 5px
-
-        .answer
-          font-size: 14px
           font-weight: 300
-          line-height: 1.25
+          margin: 0 auto
+          max-width: 632px
+          opacity: 0
 
-      #pinkFAQ
-        width: 295px
-        right: 770px
-        top: 20px
+        #slogan
+          font-size: 24px
+          font-family: $font2
+          font-style: italic
+          margin-bottom: 40px
+          max-width: none
+          // opacity: 0
 
-        .question
-          color: $pink
-          background: $white
-
-      #cyanFAQ
-        width: 410px
-        right: 0
-        top: 340px
-
-        .question
-          color: $cyan2
-
-      #greenFAQ
-        width: 260px
-        right: 30px
-        top: 0
-
-        .question
-          color: $green
 
     #platforms
       background: rgba(#D6D6D6, 0.22)
       padding: 50px 0
-      margin-top: 75px
 
       .container
+        h3
+          font-size: 64px
+          font-weight: 300
+          font-family: 'Gill Sans', $font
+          opacity: 0.65
+
         .row
           @include display(flex)
           @include align-items(center)
@@ -285,7 +192,7 @@ body
 
 
   footer
-    background: $greyBlue
+    background: $midnight
     height: 180px
     @include display(flex)
     @include flex-direction(column)
@@ -310,8 +217,8 @@ body
   .cta
     text-decoration: none
     color: $white
-    border-radius: 6px
-    padding: 15px 75px
+    border-radius: 40px
+    padding: 15px 70px
     display: inline-block
 
 
@@ -469,63 +376,10 @@ body
   .hide
     display: none
 
-@media (max-width: 1140px)
-  body main
-    .app-highlights
-
-      #appFace
-        left: 20%
-
-      #pinkDot
-        left: 41%
-
-      #cyanDot
-        left: 47%
-        top: 50%
-
-      #greenDot
-        right: 38.7%
-
-      #pinkPath
-        right: 58.4%
-
-      #cyanPath
-        width: 11.8vw
-        right: 40%
-        top: 53%
-
-      #greenPath
-        left: 60.5%
-
-      #pinkFAQ
-        left: 3%
-        background: $white
-
-      #greenFAQ
-        background: $white
-
-      #cyanFAQ
-        left: 60%
-
-@media (max-width: 1023px)
-  body main
-    #app-highlights-img
-      display: block
-      width: 95%
-      margin: 0 auto
-
-    .app-highlights
-      display: none
 
 @media (max-width: 767px)
   body
     main
-      #app-highlights-img
-        display: none
-
-      .app-highlights
-        display: none
-
       #platforms
         .container .row
           .platform
@@ -566,6 +420,8 @@ body
 
     section#hero
       height: 555px
+      background:
+        size: auto
 
       #desktopContent
         display: none
@@ -579,7 +435,7 @@ body
 
         p
           font-size: 18px
-          opacity: 0.7
+          font-weight: 300
 
     main
       #platforms
@@ -618,13 +474,19 @@ body
             img
               margin-top: 20px
 
+@media (max-width: 500px)
+  body main #app-intro .container
+    #slogan2
+      display: none
+
+
 @media (max-width: 414px)
   body
     main
       .container
         padding: 0 20px
 
-        h2,
+      #platforms
         h3
           font-size: 36px
 
